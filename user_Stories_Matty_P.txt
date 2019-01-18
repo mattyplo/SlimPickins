@@ -1,0 +1,19 @@
+1.  As a casual user I want to count calories so that I can keep track of my daily caloric intake
+
+2.  As a casual user I want to be able to save a food item and its calorie count so that I can re-use it in the future
+
+3.  As a casual user I want to be able to create a food item and associate a calorie level to that item.  
+
+4.  As a casual user I want to be able to track my daily caloric intake over a period of time
+
+5.  As an avid user I want to be able to see other food items and their caloric value so that I can consider other food options for myself.
+
+6.  As an avid user I want to set a goal value of calories for the day so that I can see how close to reaching my value I actually came.
+
+7.  As a casual user I want to be able to add a food item to my daily intake.
+
+8.  As a casual user I want to be able to change the caloric value of a food item to more acurately depict its caloric value.
+
+9.  As a clumsy user I want to be able to remove an item from my daily intake in case I make a mistake.
+
+10.  As a concerned eater I want to be able to look into my past daily calorie count and see a particular days intake.  
