@@ -1,0 +1,11 @@
+As a user
+I want to save my food allergies/sensitivities so SlimPickin can warn me to avoid items with those ingredients.
+I want to be able to just set my diet style (i.e. vegan/paleo/keto) and let SlimPickin generate recommend list of food for me
+I want to be able to quickly look up how I was doing in the past without looking at day to day intakes
+I want to be able to create new food item and its calories/nutrition facts
+I want to be able to setup a list of favorites and have them recommend to me more often
+I want to be able to search for food item based on what I feel like to have at the time (i.e. hot soup on a chill night)
+I want to be made aware what food is in the season right now
+I want to be able to put my diabetic status in my portfolio so SlimPickin can warn/recommend me on food choice
+I want to be able to set and track cheat days with SlimPickin
+I want to be able to compare different food items for its calories and nutrition so I can make informed choice.
