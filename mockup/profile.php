@@ -48,7 +48,7 @@
                 <br>
                 </div>
                 <div id="profile_submit">
-                    <input type="submit" value="Submit">
+                    <input id="profile_submit" type="submit" value="Submit">
                 </div>    
             </form>
         </div>

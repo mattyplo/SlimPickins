@@ -17,12 +17,8 @@
 
         <div class="content">
         <main id = food>
-            <form id=search name=searchbar onsubmit= "acknowledge()" method = "POST">
-                <input type="text" name="search" placeholder="What's for dinner?" size="75">
-                <input type="submit" value="search">
-            </form>
-            <div id="foodlist">
-                <?php database_search?>
+            <div id="fooditem">
+                <?php require_once 'php/foodItem.php' ?>
             </div>
         </main>
 

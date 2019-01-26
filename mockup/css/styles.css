@@ -104,6 +104,10 @@ div#profile_submit{
     margin: 290px 5% 5px 0;
 }
 
+input#profile_submit{
+    size: 50;
+}
+
 main ul {
     list-style-type:none;
     list-style-position: inside;
@@ -114,12 +118,12 @@ main h1 {
     text-align:center;
 }
 
-main#foodlist{
+main#food{
     width: 75%;
 
 }
 
-aside#foodlist{
+aside#food{
     width: 25%;
     height: 355px;
 }
@@ -153,6 +157,18 @@ div#foodlist{
     width: 75%;
     margin: 15px 0 0 0;
     height: 300px;
+}
+
+div#fooditem{
+    background-color: aqua;
+    overflow: auto;
+    width: 75%;
+    margin: 15px 0 0 0;
+    height: 300px;
+}
+
+ul#fooditem{
+    line-height: 200%;
 }
 
 table {
