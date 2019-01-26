@@ -92,11 +92,11 @@ form#login {
 }
 
 div#profile_fill{
-    width:75%;
+    width:60%;
     height: 300px;
     overflow:auto;
     float: left;
-    margin: 2% 2%;
+    margin: 2% 5%;
 }
 
 div#profile_submit{
@@ -114,12 +114,46 @@ main h1 {
     text-align:center;
 }
 
+main#foodlist{
+    width: 75%;
+
+}
+
+aside#foodlist{
+    width: 25%;
+    height: 355px;
+}
+
+button#editItem, button#deleteItem{
+    padding: 15px 30px;
+    margin: 5px 0;
+}
+
+button#editItem{
+    padding: 15px 38px;
+}
+
+button#favorite{
+    margin: 100px 0 5px 0;
+    height: 123px;
+}
+
+img#favorite{
+    width: 125px;
+    height: 120px;
+}
 
 iframe{
     margin-top:10px;
 }
 
-
+div#foodlist{
+    background-color: aqua;
+    overflow: scroll;
+    width: 75%;
+    margin: 15px 0 0 0;
+    height: 300px;
+}
 
 table {
     width:97%;
@@ -237,7 +271,7 @@ p.valid{
 
 iframe {
     width:auto;
-    border="0"; 
+    border:"0"; 
 }
 
 @media screen and (max-width:800px) {

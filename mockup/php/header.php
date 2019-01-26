@@ -9,7 +9,7 @@
             </li>
             <li><a href="profile.php">Profile</a>
             </li>
-            <li><a href="foodlist.php">Search</a>
+            <li><a href="food_list.php">Search</a>
             </li>
             
             <li><a href="faq.php">FAQ</a>

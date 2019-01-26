@@ -6,3 +6,7 @@ function validateForm() {
         return false;
     }
 }
+
+function acknowledge(){
+    alert("Ya Clicked!");
+}
