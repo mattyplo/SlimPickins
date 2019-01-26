@@ -21,8 +21,10 @@
                 <input type="text" name="search" placeholder="What's for dinner?" size="75">
                 <input type="submit" value="search">
             </form>
+            <!--  autogenerate search result list of items -->
             <div id="foodlist">
-                <?php database_search?>
+                <?php require_once 'php/foodlist.php' ?>
+
             </div>
         </main>
 

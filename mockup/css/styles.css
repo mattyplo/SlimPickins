@@ -147,6 +147,26 @@ img#favorite{
     height: 120px;
 }
 
+.foodicon{
+    float: left;
+    margin: 15px 5px 5px 25px;
+    width: 55px;
+    height: 55px;
+}
+
+.foodlist_item{
+    float: right;
+    width: 75%;
+    margin: 5px 5px;
+    text-align: center;
+}
+
+.foodlist_itemname{
+    
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
 iframe{
     margin-top:10px;
 }
