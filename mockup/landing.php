@@ -21,7 +21,7 @@
         </main>
 
         <aside>
-            <form id = login name = login onsubmit = "return validateForm()" method = "POST">
+            <form id = login name = login action = "php/welcome.php" onsubmit = "return validateForm()" method = "POST">
                 <input type="text" name="userName" placeholder="User Name"><br>
                 <br>
                 <input type="password" name="password" placeholder="Password"><br>
