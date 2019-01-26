@@ -26,7 +26,7 @@
                 <br>
                 <input type="password" name="password" placeholder="Password"><br>
                 <br>
-                <input type="submit"> 
+                <input type="submit" value="Logon"> 
             </form>
         </aside>
         </div>
