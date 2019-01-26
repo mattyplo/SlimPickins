@@ -7,5 +7,7 @@
         }
     }
 
-    echo "weclome to site of security risk.";
+    echo "weclome to site of security risk.<br>";
     ?>
+
+    <a href="../index.php">Go to your Journal Home

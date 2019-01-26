@@ -5,16 +5,16 @@
         
     <nav id= "primary">
         <ul>
-            <li><a href="index.html">Home</a>
+            <li><a href="index.php">Home</a>
             </li>
-            <li><a href="profile.html">Profile</a>
+            <li><a href="profile.php">Profile</a>
             </li>
-            <li><a href="foodlist.html">Search</a>
+            <li><a href="foodlist.php">Search</a>
             </li>
             
-            <li><a href="faq.html">FAQ</a>
+            <li><a href="faq.php">FAQ</a>
             </li>
-            <li><a href = "landing.html">Login</a></li>
+            <li><a href = "landing.php">Login</a></li>
         </ul>
     </nav>
 
