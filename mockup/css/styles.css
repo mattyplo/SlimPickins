@@ -133,6 +133,14 @@ aside#food{
     height: 355px;
 }
 
+div#foodlist_item{
+    height: 100px;
+    padding: 2px;
+    border-style: solid;
+    border-width: 2px;
+    margin: 1px;
+}
+
 button#editItem, button#deleteItem{
     padding: 15px 30px;
     margin: 5px 0;
@@ -155,8 +163,8 @@ img#favorite{
 .foodicon{
     float: left;
     margin: 15px 5px 5px 25px;
-    width: 55px;
-    height: 55px;
+    width: 75px;
+    height: 75px;
 }
 
 .foodlist_item{
@@ -179,7 +187,7 @@ iframe{
 div#foodlist{
     background-color: aqua;
     overflow: scroll;
-    width: 75%;
+    width: 100%;
     margin: 15px 0 0 0;
     height: 300px;
 }
