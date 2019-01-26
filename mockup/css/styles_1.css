@@ -1,37 +1,16 @@
-/*CSS Styles*/
+/* this is for the git pages */
 
 *{
-    padding:0;
-    margin:0;
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 
-body {
-    font-size:100%;
-    font-family:modern_sans_light;    
-}
-
-body.home #wrapper {
-    /*width:940px;*/
-    width: 78%;
-    max-width:1100px;
-    margin:109px auto 0 auto;
-}
-
-body.home nav#primary li:nth-child(0), 
-
-header{   
+header{
+   /* position:fixed;  */
     width:100%;
     top:0;
     left:0;
     background:rgba(255, 255, 255,.8);
     overflow: hidden;
-    border-bottom: 2px;
-    border-bottom: 3px solid rgba(102, 6, 6, 0.94); 
-}
-
-header#index{
-    position:fixed; 
 }
 
 nav#primary{
@@ -71,13 +50,18 @@ nav#primary a:hover{
     overflow: hidden;
 }
 
+
+.content{
+    padding-top: 5px;
+    overflow: hidden;
+}
+
 main{
-   /* width:560px; 560px divided by 940px*/
-    width:50%;
-    margin:0 auto;
-    clear:both;
-    padding:15px;
     float: left;
+    width: 50%;
+    /* margin: 16px 0px;  */
+    background-color: white;
+    /* text-align: center; */
 }
 
 aside{
@@ -87,86 +71,17 @@ aside{
     text-align: center;
 }
 
-form#login {
-    margin: 45% 0;
-}
-
-main ul {
-    list-style-type:none;
-    list-style-position: inside;
-        margin-bottom:10px;
-}
-
-main h1 {
-    text-align:center;
-}
-
-
-iframe{
-    margin-top:10px;
-}
-
-
-
-table {
-    width:97%;
-    margin:0 auto;
-    margin-top:5px;
-    
-}
-
-
-td {
-    width:33.33%;
-    vertical-align:top;
-    padding:5px;
-    text-align:center;
-}
-
-th {
-    font-size:1.2em;
-    padding:15px;
-}
-
-
-
 footer{
-    height:50px;
-    line-height:50px;
-    clear:both;
-    border-top:1px dotted #666;
-    /* overflow: hidden; */
+    font-weight:bold;
+    overflow: hidden;
+    padding: 5px;
+    background-color: rgba(209, 207, 207, 0.94);
+    vertical-align: baseline;
+    border-top: 3px solid rgba(102, 6, 6, 0.94); 
 }
 
-footer ul {
-    /*padding-left:20px;*/
-    padding-left:10%;
-    clear:both;
-    
-}
-
-footer li{
-    float:left;
-    list-style-type:none;
-    /*margin-right:30px;*/
-    margin-right: 8%;
-    font-size:.875em;
-
-}
-
-footer a {
-    color:black;
-}
-
-.valid{
-    clear:both;
-}
-
-
-hr {
-    border-style:dotted;
-    border-color:#666;
-    margin-top:20px;
+div#main{
+    text-align: center;
 }
 
 /*++++++Typography+++++++++*/

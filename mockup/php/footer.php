@@ -1,6 +1,4 @@
-<<!DOCTYPE html>
-<html>
-<body>
+<div id="footer">
     <table>
         <tr>
         <th>Our Products</th>
@@ -27,5 +25,4 @@
     </ul>
 
     <p class = "valid"><a href = "https://validator.w3.org/check?uri=referer">Valid</a></p>
-</body>
-</html>
+</div>

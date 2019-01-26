@@ -17,10 +17,8 @@
 
 <body class = "home">
     
-    <header>
-        
-        <?php include 'php/header.php'; ?>
-        
+    <header id = "index">        
+        <?php require_once 'php/header.php'; ?>        
      </header>
    
     
@@ -101,10 +99,8 @@
        
         
         
-        <footer>
-            
-            <?php require_once 'php/footer.php' ?>
-        
+        <footer>            
+            <?php require_once 'php/footer.php' ?>        
         </footer>
     
     
