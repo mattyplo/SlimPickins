@@ -91,6 +91,19 @@ form#login {
     margin: 45% 0;
 }
 
+div#profile_fill{
+    width:75%;
+    height: 300px;
+    overflow:auto;
+    float: left;
+    margin: 2% 2%;
+}
+
+div#profile_submit{
+    float: right;
+    margin: 290px 5% 5px 0;
+}
+
 main ul {
     list-style-type:none;
     list-style-position: inside;

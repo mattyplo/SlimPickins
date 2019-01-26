@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Slim Pickins</title>
+<title>Slim Pickins Journal</title>
 
 <!--Remy Sharp Shim --> 
 <!--[if lte IE 9]> 
