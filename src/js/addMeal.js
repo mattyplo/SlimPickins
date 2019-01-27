@@ -10,11 +10,13 @@ document.addEventListener('DOMContentLoaded', function() {
   
   function newOrExistingChecked() {
     if (this.value === "new") {
-      // code to add a new item
+      document.getElementById("existing").style.display = "none";
     } else if (this.value === "existing") {
-      // code to show existing food items
+      document.getElementById("existing").style.display = "block";
     }
   }
+  
+  
   
   var addMealButton = document.getElementById("addMeal"); 
   var closeFormButton = document.getElementById("closeFormButton");

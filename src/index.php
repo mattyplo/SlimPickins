@@ -1,6 +1,7 @@
 <?php 
 
   require "../DataModel/MockFoodItemsData.php";
+  require "php/renderMockData.php";
 
 ?>
 
@@ -39,7 +40,7 @@
         
         <div class="form-popup" id="myForm">
           <form action="/action_page.php" class="form-container">
-            <h1>Login</h1>
+            <h1>Add Meal</h1>
 
             <label for="date"><b>Date</b></label>
             <input type="text" placeholder="MM/DD/YYYY" name="date" required>
@@ -52,8 +53,19 @@
             </select>
             <br>
             <br>
-            <input type="radio" id="new" name="newOrExisting" value="new" checked> New <br>
-            <input type="radio" id="existing" name="newOrExisting" value="existing"> Existing <br>
+            <input type="radio" name="newOrExisting" value="new" checked> New <br>
+            <input type="radio" name="newOrExisting" value="existing"> Existing <br>
+            
+            <div id="existing">
+              <br>
+              <select name="foodItem">
+                <?php
+                  foreach ($mockDBQuery as $item) {
+                    echo renderFoodItemToOption($item);
+                  }
+                ?>
+              </select>
+            </div>
             
             <br>
             <button type="submit" class="btn">Add Meal</button>
