@@ -42,10 +42,13 @@
               <option value="lunch">Lunch</option>
               <option value="dinner">Dinner</option>
               <option value="snack">Snack</option>
-            </select><br>
-            <input type="radio" name="newOrExisting" value="new" checked> New <br>
-            <input type="radio" name="newOrExisting" value="existing"> Existing <br>
+            </select>
+            <br>
+            <br>
+            <input type="radio" id="new" name="newOrExisting" value="new" checked> New <br>
+            <input type="radio" id="existing" name="newOrExisting" value="existing"> Existing <br>
             
+            <br>
             <button type="submit" class="btn">Add Meal</button>
             <button type="button" class="btn cancel" id="closeFormButton" >Cancel Add Meal</button>
           </form>
