@@ -1,3 +1,10 @@
+<?php 
+
+  require "../DataModel/MockFoodItemsData.php";
+
+?>
+
+
 <!doctype html>
 <html lang="en">
 <head>
