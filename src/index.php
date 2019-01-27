@@ -34,14 +34,20 @@
           <form action="/action_page.php" class="form-container">
             <h1>Login</h1>
 
-            <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" required>
-
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-
-            <button type="submit" class="btn">Login</button>
-            <button type="button" class="btn cancel" id="closeFormButton" >Close</button>
+            <label for="date"><b>Date</b></label>
+            <input type="text" placeholder="MM/DD/YYYY" name="date" required>
+            <label for="meal"><b>Meal</b></label>
+            <select name="meal">
+              <option value="breakfast">Breakfast</option>
+              <option value="lunch">Lunch</option>
+              <option value="dinner">Dinner</option>
+              <option value="snack">Snack</option>
+            </select><br>
+            <input type="radio" name="newOrExisting" value="new" checked> New <br>
+            <input type="radio" name="newOrExisting" value="existing"> Existing <br>
+            
+            <button type="submit" class="btn">Add Meal</button>
+            <button type="button" class="btn cancel" id="closeFormButton" >Cancel Add Meal</button>
           </form>
         </div>
            
