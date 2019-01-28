@@ -2,6 +2,7 @@
 
   require "../DataModel/MockFoodItemsData.php";
   require "php/renderMockData.php";
+  require "../DataModel/MockMealsData.php";
 
 ?>
 
@@ -72,6 +73,10 @@
             <button type="button" class="btn cancel" id="closeFormButton" >Cancel Add Meal</button>
           </form>
         </div>
+           
+        <?php
+          renderMealsToPage($mockMealQuery);
+        ?>
            
         <h1>Today</h1>
         <h3>Breakfast</h3>
