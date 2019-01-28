@@ -1,6 +1,6 @@
 <div id = "header">
 
-    <a class="logo" href = "index.html"><h1 class="logo">Slim Pickins</h1></a>
+    <a class="logo" href = "index.php"><h1 class="logo">Slim Pickins</h1></a>
         
         
     <nav id= "primary">
