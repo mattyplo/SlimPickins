@@ -11,9 +11,6 @@
             </li>
             <li><a href="food_list.php">Search</a>
             </li>
-            
-            <li><a href="faq.php">FAQ</a>
-            </li>
             <li><a href = "landing.php">Login</a></li>
         </ul>
     </nav>
