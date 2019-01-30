@@ -18,11 +18,13 @@
         <div class="content">
         <main id = food>
             <form id=search name=searchbar onsubmit= "acknowledge()" method = "POST">
-                <input type="text" name="search" placeholder="What's for dinner?" size="75">
+                <input type="text" name="search" placeholder="What's for dinner?" size="100">
                 <input type="submit" value="search">
             </form>
+            <!--  autogenerate search result list of items -->
             <div id="foodlist">
-                <?php database_search?>
+                <?php require_once 'php/foodlist.php' ?>
+
             </div>
         </main>
 
