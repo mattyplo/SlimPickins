@@ -6,15 +6,6 @@
     <nav id= "primary">
 
         <ul>
-<<<<<<< HEAD:src/php/header.php
-            <li><a href="index.php">Home</a>
-            </li>
-            <li><a href="profile.php">Profile</a>
-            </li>
-            <li><a href="food_list.php">Search</a>
-            </li>
-            <li><a href = "landing.php">Login</a></li>
-=======
 
         <?php
         $file_calling= pathinfo($_SERVER['SCRIPT_FILENAME']);
@@ -52,7 +43,7 @@
         // }
         
         ?>
->>>>>>> 3f57196da6968984dfd04284f5960d8a7072c16f:mockup/php/header.php
+
         </ul>
     </nav>
 
