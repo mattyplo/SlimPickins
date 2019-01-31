@@ -1,11 +1,3 @@
-<?php 
-
-  require "../DataModel/MockFoodItemsData.php";
-  require "php/renderMockData.php";
-  require "../DataModel/MockMealsData.php";
-
-?>
-
 
 <!doctype html>
 <html lang="en">
