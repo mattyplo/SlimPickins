@@ -3,11 +3,10 @@ The Slim Pickins web application is a simple calorie counter.  It allows a user 
 #Setting up for the Database.  
 You will need to add a file in the php folder called credentials.php
 
-You will have to assign the appropriate values to the variables given.  The file should resemble the following.
+You will have to assign the appropriate values to the variables given.  The file should resemble the following.  Be sure to add php tags.
 
-<?php
   $servername = "servername";
   $username = "username";
   $password = "password";
   $dbname = "dbname";
-?>
+
