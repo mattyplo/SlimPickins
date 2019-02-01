@@ -3,32 +3,24 @@
   require("dbconnection.php");
 
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    
-      
-      $errors = validate_report($report);
-      if(!empty($errors)) {
-        return $errors;
-      }
       
       $sql = "INSERT INTO Foods ";
       $sql .= "(FoodName, GramsPerServing, CaloriesPerGram) ";
       $sql .= "VALUES (";
-      $sql .= "'" . db_escape($db, $report['TripReportName']) . "',";
-      $sql .= "'" . db_escape($db, $report['TripReportMileage']) . "',";
-      $sql .= "'" . db_escape($db, $report['TripReportDate']) . "',";
-      $sql .= "'" . db_escape($db, $report['TripReportLocation']) . "',";
-      $sql .= "'" . db_escape($db, $report['TripReportAuthorUserId']) . "',";
-      $sql .= "'" . db_escape($db, $report['TripReportReport']) . "'";
+      $sql .= "'" . $_POST['foodName'] . "',";
+      $sql .= $_POST['gramsPerCalorie'] . ",";
+      $sql .= $_POST['gramsPerServing'];
       $sql .= ")";
-      $result = mysqli_query($db, $sql);
+      $result = mysqli_query($conn, $sql);
       
       if($result) {
-          return true;
+          echo("yay");
       } else {
-          echo mysqli_error($db);
-          db_disconnect($db);
+          echo mysqli_error($conn);
+          db_disconnect($conn);
           exit;
       }
+      
   }
 
   // send user to appropriate page
