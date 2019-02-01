@@ -32,7 +32,7 @@
         <button id="addMeal">Add Meal</button>
         
         <div class="form-popup" id="myForm">
-          <form action="/action_page.php" class="form-container">
+          <form action="php/formHandler.php" class="form-container" method="post">
             <h1>Add Meal</h1>
 
             <label for="date"><b>Date</b></label>
@@ -47,6 +47,17 @@
             <br>
             <br>
             <input type="radio" name="newOrExisting" value="new" checked> New <br>
+            
+            <div id="new">
+              <br>
+              <label for="foodItem"><b>Food Name</b></label>
+              <input type="text" name="foodName">
+              <label for="gramsPerCalorie"><b>Grams Per Calorie</b></label>
+              <input type="number" name="gramsPerCalorie">
+              <label for="gramsPerServing"><b>Grams Per Serving</b></label>
+              <input type="number" name="gramsPerServing">
+            </div>
+            
             <input type="radio" name="newOrExisting" value="existing"> Existing <br>
             
             <div id="existing">

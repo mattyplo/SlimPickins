@@ -10,8 +10,10 @@ document.addEventListener('DOMContentLoaded', function() {
   
   function newOrExistingChecked() {
     if (this.value === "new") {
+      document.getElementById("new").style.display = "block";
       document.getElementById("existing").style.display = "none";
     } else if (this.value === "existing") {
+      document.getElementById("new").style.display = "none";
       document.getElementById("existing").style.display = "block";
     }
   }
