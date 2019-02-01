@@ -26,8 +26,6 @@ header{
     left:0;
     background:rgba(255, 255, 255,.8);
     overflow: hidden;
-    border-bottom: 2px;
-    border-bottom: 3px solid rgba(102, 6, 6, 0.94); 
 }
 
 header#index{
@@ -59,14 +57,15 @@ nav#primary a{
 }
 
 nav#primary a:hover{
-    background:#F1948A;
+    background:darkseagreen;
     display:block;
     color:#fff;
 }
 
 .active{
-    background:#F1948A;
+    background:darkseagreen;
     display:block;
+    color:#fff;
 }
 
 .wrapper{
