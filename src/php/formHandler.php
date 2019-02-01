@@ -1,8 +1,10 @@
 <?php
 
+  require("dbconnection.php");
+
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    die("yah");
+    
   }
 
-  die ("nah");
+  // send user to appropriate page
 ?>
