@@ -24,16 +24,16 @@
   
 </head>
 
-<body class = "home">
+<body>
     
-    <header id = "index">        
-        <?php require_once 'php/header.php'; ?>        
-     </header>
+    
    
     
-    <div id="wrapper">
+    <div class="wrapper">
         
-    
+    <header>        
+        <?php require_once 'php/header.php'; ?>        
+     </header>
 
          <main>
         
@@ -78,7 +78,7 @@
           renderMealsToPage($mockMealQuery);
         ?>
            
-        <h1>Today</h1>
+        <h2>Today</h2>
         <h3>Breakfast</h3>
              <ul>
                 <li>item 1</li>
@@ -100,7 +100,7 @@
              </ul>
              
              
-             <h1>Yesterday</h1>
+             <h2>Yesterday</h2>
         <h3>Breakfast</h3>
              <ul>
                 <li>item 1</li>
@@ -122,7 +122,7 @@
              </ul>
              
              
-             <h1>A while back</h1>
+             <h2>A while back</h2>
         <h3>Breakfast</h3>
              <ul>
                 <li>item 1</li>

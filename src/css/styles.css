@@ -11,12 +11,6 @@ body {
     font-family:modern_sans_light;    
 }
 
-body.home #wrapper {
-    /*width:940px;*/
-    width: 78%;
-    max-width:1100px;
-    margin:109px auto 0 auto;
-}
 
 body.home nav#primary li:nth-child(0), 
 
@@ -26,10 +20,6 @@ header{
     left:0;
     background:rgba(255, 255, 255,.8);
     overflow: hidden;
-}
-
-header#index{
-    position:fixed; 
 }
 
 nav#primary{
@@ -46,7 +36,7 @@ nav#primary li{
 }
 
 nav#primary ul {
-    width:89%;
+    width:100%;
     margin:0 auto;
     max-width:1100px;
 }
@@ -280,7 +270,7 @@ h1 {
 }
 
 .logo{
-    font-size:1.6em;
+    font-size:1.8em;
     text-align:center;
     text-decoration:none;
     margin:8px auto;
@@ -312,10 +302,6 @@ h4 {
     
 }
 
-p.valid{
-    width:50px;
-    margin:0 auto 20px auto;
-}
 
 iframe {
     width:auto;
@@ -396,15 +382,11 @@ iframe {
   display: none;
 }
 @media screen and (max-width:800px) {
-        body.home #wrapper {
+        body #wrapper {
         /*width:940px;*/
         width: 95%;    
     }
 
-    body.inner #wrapper {
-        /*width:940px;*/
-        width:95%;    
-    }
     
     nav#primary ul {
         /*width: 1100px;*/
