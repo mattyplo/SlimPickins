@@ -46,19 +46,15 @@
             </select>
             <br>
             <br>
+            
             <input type="radio" name="newOrExisting" value="new" checked> New <br>
+            <input type="radio" name="newOrExisting" value="existing"> Existing <br>
             
             <div id="new">
               <br>
               <label for="foodItem"><b>Food Name</b></label>
               <input type="text" name="foodName">
-              <label for="gramsPerCalorie"><b>Grams Per Calorie</b></label>
-              <input type="number" name="gramsPerCalorie">
-              <label for="gramsPerServing"><b>Grams Per Serving</b></label>
-              <input type="number" name="gramsPerServing">
             </div>
-            
-            <input type="radio" name="newOrExisting" value="existing"> Existing <br>
             
             <div id="existing">
               <br>
@@ -69,8 +65,16 @@
                   }
                 ?>
               </select>
+              <br>
+              <br>
             </div>
             
+            <label for="gramsPerCalorie"><b>Grams Per Calorie</b></label>
+            <input type="number" name="gramsPerCalorie" step="0.01">
+            <label for="gramsPerServing"><b>Grams Per Serving</b></label>
+            <input type="number" name="gramsPerServing" step="0.01">
+            
+            <br>
             <br>
             <button type="submit" class="btn">Add Meal</button>
             <button type="button" class="btn cancel" id="closeFormButton" >Cancel Add Meal</button>
