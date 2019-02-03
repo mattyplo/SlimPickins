@@ -4,7 +4,33 @@
 
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
-    // if The food item is existing already, don't create a new one
+    // create a new meal
+    switch ($_POST['meal']) {
+    case "breakfast":
+        $mealType = 1;
+        break;
+    case "lunch":
+        $mealType = 2;
+        break;
+    case "dinner":
+        $mealType = 3;
+        break;
+    default:
+        $mealType = 4;
+    }
+    
+    $date = $_POST['date'];
+    $sqlMeal = "INSERT INTO Meals ";
+    $sqlMeal .= "(`Date`, MealTypeID, UserID) ";
+    $sqlMeal .= "VALUES (";
+    $sqlMeal .= "'" . $date ."',";
+    $sqlMeal .= $mealType . ", ";
+    $sqlMeal .= 1;
+    $sqlMeal .= ")";
+    $resultMeal = mysqli_query($conn, $sqlMeal);
+
+    
+    // handlers the creation of a new food item
     if ($_POST['newOrExisting'] == "existing") {
       // insert food into meal
     } else {
