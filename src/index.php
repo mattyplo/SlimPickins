@@ -58,10 +58,12 @@
             
             <div id="existing">
               <br>
-              <select name="foodItem">
+              <select name="foodName">
                 <?php
                   foreach ($mockDBQuery as $item) {
-                    echo renderFoodItemToOption($item);
+                    echo "<option value='$item'>" 
+                      . renderFoodItemToOption($item) 
+                      . "</option>";
                   }
                 ?>
               </select>
