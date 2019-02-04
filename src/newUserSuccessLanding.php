@@ -30,7 +30,7 @@
              
         <br>Get started by navigating to the profile page to customize your settings: 
              
-        <a href = "../profile.php"> My Profile</a>
+        <a href = "profile.php"> My Profile</a>
            
         
              
