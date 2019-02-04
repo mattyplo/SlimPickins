@@ -18,37 +18,20 @@
         <div class="content">
             <form name = profile action = "php/welcome.php" onsubmit = "return validateForm()" method = "POST">
                 <div id = profile_fill>
-                Name: <input type="text" name="name" placeholder="User Name"><br>
+                First Name: <input type="text" name="first" placeholder="User Name"><br>
+                <br>
+                Last Name: <input type="text" name="last" placeholder="Last Name"><br>
                 <br>
                 Biological Sex: <input type="text" name="sex" placeholder="Male/Female"><br>
+                <br>    
+                Date of Birth: <input type="datetime-local" name="Date of Birth"><br>
                 <br>
-                Date of Birth: <input type="datetime-local" name="DoB"><br>
-                <br>
-                Diet Goal: <input type="text" name="goal" placeholder="lose 5 lbs."><br>
-                <br>
-                Allegents: <input type="text" name="allegent" placeholder="peanuts, seafood, hotdogs"><br>
-                <br>
-                Something: <input type="text" name="something" placeholder="blahblah"><br>
-                <br>
-                Something: <input type="text" name="something" placeholder="blahblah"><br>
-                <br>
-                Something: <input type="text" name="something" placeholder="blahblah"><br>
-                <br>
-                Something: <input type="text" name="something" placeholder="blahblah"><br>
-                <br>
-                Something: <input type="text" name="something" placeholder="blahblah"><br>
-                <br>
-                Something: <input type="text" name="something" placeholder="blahblah"><br>
-                <br>
-                Something: <input type="text" name="something" placeholder="blahblah"><br>
-                <br>
-                Something: <input type="text" name="something" placeholder="blahblah"><br>
-                <br>
-                Something: <input type="text" name="something" placeholder="blahblah"><br>
-                <br>
+                Current Weight(lbs): <input type="text" name="sex" placeholder="i.e. 125"><br>
+               
+          
                 </div>
                 <div id="profile_submit">
-                    <input id="profile_submit" type="submit" value="Submit">
+                    <input id="profile_submit" type="submit" value="Update">
                 </div>    
             </form>
         </div>

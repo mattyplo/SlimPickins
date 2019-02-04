@@ -79,10 +79,11 @@ aside{
     width: 50%;
     background-color: white;
     text-align: center;
+    clear:both;
 }
 
 form#login {
-    margin: 45% 0;
+    margin: 45% 0;    
 }
 
 div#profile_fill{
@@ -411,13 +412,22 @@ iframe {
 
 }
 
-@media screen and (max-width:700px){
-    main{
-        /* width:560px; 560px divided by 940px*/   
-        width:auto;
-        float:none; 
+@media screen and (max-width:800px){
+    
+    #wrapper {
+        width:95%;
     }
     
+    main{
+        /* width:560px; 560px divided by 940px*/   
+        width:56.57%;    
+    }
+    
+
+    
+}
+
+
 }
 
 /*++++++Typography+++++++++*/   

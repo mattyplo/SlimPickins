@@ -16,7 +16,7 @@ if($_SERVER['REQUEST_METHOD']==='POST') {
     
     
     if ($result){
-        die("die");
+        header("Location:../newUserSuccessLanding.php");
     }else {
         die(mysqli_error($conn));
         echo mysqli_error($conn);
@@ -25,7 +25,6 @@ if($_SERVER['REQUEST_METHOD']==='POST') {
     }    
 }
 
-header("Location:../index.php");
 
 
 ?>

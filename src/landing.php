@@ -17,17 +17,28 @@
 
         <div class="content">
         <main>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec enim condimentum, dignissim quam eu, fermentum arcu. Integer at viverra leo. Duis pulvinar ornare quam non aliquet. Nam sollicitudin dui dui, ut fermentum turpis porta quis. Fusce ante nibh, auctor ut mollis sit amet, sodales vitae arcu. Fusce vitae neque lectus. Sed finibus velit risus, at vulputate dui dictum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus pulvinar tempor lacus, eu varius ipsum aliquam sit amet. Vivamus tempor arcu a urna congue semper. Mauris vulputate vestibulum lectus in scelerisque. </p>
-            <p>Nulla elementum turpis mi, eget elementum lacus vulputate a. Nullam feugiat semper massa eu ultricies. Vivamus sagittis ipsum libero, blandit mollis quam cursus non. Maecenas ut posuere velit, vitae cursus ante. Suspendisse iaculis lorem volutpat, laoreet est in, aliquam mi. Phasellus efficitur ultricies iaculis. Maecenas vel rhoncus turpis. Vivamus blandit pellentesque tellus eget ultrices. </p>
+            <p>Welcome to Slim Pickins Calorie Counter! Research shows that people who log calories lose more weight and are more likely to keep the weight off over time. Let us help you with our easy-to-use diary layout and highly customizable database.
+            </p>
+            
+            <p>Our food database is curated by staff and highly customizable according to your dietary preferences and needs. Pick and choose from existing foods or create a new food item and add it to your daily log. Then let the app do the rest of the work for you! You'll know exactly how many calories you've consumed daily and be able to use that information to power your health and fitness goals.
+            </p>
+            
+            <p>Register as a new user and start your Slim Pickins journey today!
+            </p>
         </main>
 
         <aside>
-            <form id = login name = login action = "php/welcome.php" onsubmit = "return validateForm()" method = "POST">
+            <form id = login name = "login" action = "php/welcome.php" onsubmit = "return validateForm()" method = "POST">
                 <input type="text" name="userName" placeholder="User Name"><br>
                 <br>
                 <input type="password" name="password" placeholder="Password"><br>
                 <br>
-                <input type="submit" value="Logon"> 
+                <input type="submit" value="Log In"> 
+            </form>
+            
+            <form id="newUser" name = "newUser" action ="php/newUser.php" method="POST">
+                <input type="submit" value ="New User">
+            
             </form>
         </aside>
         </div>
