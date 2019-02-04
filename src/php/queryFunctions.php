@@ -18,9 +18,19 @@ function insertFoodItem($foodItem) {
   
 }
 
+function insertMeal($meal) {
 
-
-
-
+  global $conn;
+  
+  $sqlMeal = "INSERT INTO Meals ";
+  $sqlMeal .= "(`Date`, MealTypeID, UserID) ";
+  $sqlMeal .= "VALUES (";
+  $sqlMeal .= "'" . $meal['date'] . "',";
+  $sqlMeal .= $meal['mealType'] . ",";
+  $sqlMeal .= $meal['userID'];
+  $sqlMeal .= ")";
+  mysqli_query($conn, $sqlMeal);
+ 
+}
 
 ?>
