@@ -1,5 +1,6 @@
 <?php
 require("dbConnection.php");
+require("../Model/queryFunctions.php");
 
 //initialize the session
 session_start();
@@ -12,20 +13,14 @@ session_start();
 
 if($_SERVER['REQUEST_METHOD']==='POST') {
     
-    $user = $_POST['userName'];
-    $password = $_POST['password'];
-    
-    $sql = "SELECT UserName, `Password` FROM Users WHERE UserName = '";
-    $sql.=$user . "' ";
-    $sql.="AND ";
-    $sql.="`Password` = '";
-    $sql.=$password . "';";
-    $result = mysqli_query($conn, $sql);
-        
+    $user = [];
+    $user['userName'] = $_POST['userName'];
+    $user['password'] = $_POST['password'];
+    $result = selectUser($user);    
     //associative array
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
     
-    if ($user == $row['UserName'] && $password == $row['Password']){
+    if ($user['userName'] == $row['UserName'] && $user['password'] == $row['Password']){
         header("Location: ../View/profile.php");
     } else {
         echo "No match.";

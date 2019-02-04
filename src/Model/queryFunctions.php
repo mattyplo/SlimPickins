@@ -49,4 +49,17 @@ function insertUser($user) {
   
 }
 
+function selectUser($user) {
+  
+  global $conn;
+  
+  $sql = "SELECT UserName, `Password` FROM Users WHERE UserName = '";
+  $sql .= $user['userName'] . "' ";
+  $sql .= "AND ";
+  $sql .= "`Password` = '";
+  $sql .= $user['password'] . "';";
+  return mysqli_query($conn, $sql);
+
+}
+
 ?>
