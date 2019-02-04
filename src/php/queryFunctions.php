@@ -33,4 +33,20 @@ function insertMeal($meal) {
  
 }
 
+function insertUser($user) {
+  
+  global $conn;
+  
+  $sql = "INSERT INTO Users ";
+  $sql .="(FirstName, LastName, UserName, Password) ";
+  $sql .="VALUES (";
+  $sql .="'" . $user['firstName']."',";
+  $sql .="'" . $user['lastName'] ."',";
+  $sql .="'" . $user['userName'] ."',";
+  $sql .="'" . $user['password'] ."'";
+  $sql .=")";
+  mysqli_query($conn, $sql);
+  
+}
+
 ?>
