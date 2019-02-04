@@ -12,11 +12,11 @@
 <body>
     <div class="wrapper">
         <header>
-            <?php require_once 'php/header.php'; ?>  
+            <?php require_once 'header.php'; ?>  
         </header>
 
         <div class="content">
-            <form name = profile action = "php/welcome.php" onsubmit = "return validateForm()" method = "POST">
+            <form name = profile action = "welcome.php" onsubmit = "return validateForm()" method = "POST">
                 <div id = profile_fill>
                 First Name: <input type="text" name="first" placeholder="User Name"><br>
                 <br>
@@ -37,7 +37,7 @@
         </div>
 
         <footer>            
-            <?php require_once 'php/footer.php' ?>        
+            <?php require_once 'footer.php' ?>        
         </footer>
     </div>
 </body> 

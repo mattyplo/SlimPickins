@@ -20,7 +20,7 @@
     <div class="wrapper">
         
     <header>        
-        <?php require_once 'php/header.php'; ?>        
+        <?php require_once 'header.php'; ?>        
      </header>
 
          <main>

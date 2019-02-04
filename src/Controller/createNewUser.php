@@ -1,7 +1,7 @@
 <?php
 
 require("dbconnection.php");
-require("queryFunctions.php");
+require("../Model/queryFunctions.php");
 
 if($_SERVER['REQUEST_METHOD']==='POST') {
     
@@ -13,7 +13,7 @@ if($_SERVER['REQUEST_METHOD']==='POST') {
 
   insertUser($user);
   
-  header("Location:../newUserSuccessLanding.php");
+  header("Location:../View/newUserSuccessLanding.php");
     
 }
 

@@ -1,4 +1,4 @@
-<form id="newUser" action="createNewUser.php" method="POST">
+<form id="newUser" action="../Controller/createNewUser.php" method="POST">
     <input type="text" name="userName" placeholder="User Name"><br>
     <br>
     <input type="password" name="password" placeholder="Password"><br>

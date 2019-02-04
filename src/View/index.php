@@ -24,7 +24,7 @@
     <div class="wrapper">
         
     <header>        
-        <?php require_once 'php/header.php'; ?>        
+        <?php require_once 'header.php'; ?>        
      </header>
 
          <main>
@@ -32,7 +32,7 @@
         <button id="addMeal">Add Meal</button>
         
         <div class="form-popup" id="myForm">
-          <form action="php/formHandler.php" class="form-container" method="post">
+          <form action="../Controller/formHandler.php" class="form-container" method="post">
             <h1>Add Meal</h1>
 
             <label for="date"><b>Date</b></label>
@@ -90,7 +90,7 @@
         
         
         <footer>            
-            <?php require_once 'php/footer.php' ?>        
+            <?php require_once 'footer.php' ?>        
         </footer>
     
     

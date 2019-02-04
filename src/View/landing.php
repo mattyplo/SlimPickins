@@ -12,7 +12,7 @@
 <body>
     <div class="wrapper">
         <header>
-            <?php require_once 'php/header.php'; ?>  
+            <?php require_once 'header.php'; ?>  
         </header>
 
         <div class="content">
@@ -28,7 +28,7 @@
         </main>
 
         <aside>
-            <form id = login name = "login" action = "php/welcome.php" onsubmit = "return validateForm()" method = "POST">
+            <form id = login name = "login" action = "../Controller/welcome.php" onsubmit = "return validateForm()" method = "POST">
                 <input type="text" name="userName" placeholder="User Name"><br>
                 <br>
                 <input type="password" name="password" placeholder="Password"><br>
@@ -36,7 +36,7 @@
                 <input type="submit" value="Log In"> 
             </form>
             
-            <form id="newUser" name = "newUser" action ="php/newUser.php" method="POST">
+            <form id="newUser" name = "newUser" action ="newUser.php" method="POST">
                 <input type="submit" value ="New User">
             
             </form>
@@ -44,7 +44,7 @@
         </div>
 
         <footer>            
-            <?php require_once 'php/footer.php' ?>        
+            <?php require_once 'footer.php' ?>        
         </footer>
     </div>
 </body> 

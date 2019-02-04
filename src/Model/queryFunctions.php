@@ -1,6 +1,6 @@
 <?php
 
-require("dbConnection.php");
+require("../Controller/dbConnection.php");
 
 function insertFoodItem($foodItem) {
   

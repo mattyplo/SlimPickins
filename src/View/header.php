@@ -1,8 +1,8 @@
 <?php
-  require "../DataModel/MockFoodItemsData.php";
-  require "php/renderMockData.php";
-  require "../DataModel/MockMealsData.php";
-  require "php/dbconnection.php";
+  require "../Model/MockFoodItemsData.php";
+  require "../Model/renderMockData.php";
+  require "../Model/MockMealsData.php";
+  require "../Controller/dbconnection.php";
 ?>
 
 <div id = "header">

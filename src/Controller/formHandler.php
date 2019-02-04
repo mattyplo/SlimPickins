@@ -1,7 +1,7 @@
 <?php
 
   require("dbconnection.php");
-  require("queryFunctions.php");
+  require("../Model/queryFunctions.php");
 
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
@@ -43,5 +43,5 @@
     }
   }
   // send user to appropriate page
-  header("Location: ../index.php");
+  header("Location: ../View/index.php");
 ?>

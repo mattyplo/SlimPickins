@@ -1,5 +1,5 @@
 <?php
-require("dbconnection.php");
+require("dbConnection.php");
 
 //initialize the session
 session_start();
@@ -26,7 +26,7 @@ if($_SERVER['REQUEST_METHOD']==='POST') {
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
     
     if ($user == $row['UserName'] && $password == $row['Password']){
-        header("Location:../profile.php");
+        header("Location: ../View/profile.php");
     } else {
         echo "No match.";
     }

@@ -12,7 +12,7 @@
 <body>
     <div class="wrapper">
         <header>
-            <?php require_once 'php/header.php'; ?>  
+            <?php require_once 'header.php'; ?>  
         </header>
 
         <div class="content">
@@ -23,7 +23,7 @@
             </form>
             <!--  autogenerate search result list of items -->
             <div id="foodlist">
-                <?php require_once 'php/foodlist.php' ?>
+                <?php require_once 'foodlist.php' ?>
 
             </div>
         </main>
@@ -44,7 +44,7 @@
         </div>
 
         <footer>            
-            <?php require_once 'php/footer.php' ?>        
+            <?php require_once 'footer.php' ?>        
         </footer>
     </div>
 </body> 
