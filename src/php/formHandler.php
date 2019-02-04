@@ -1,6 +1,7 @@
 <?php
 
   require("dbconnection.php");
+  require("queryFunctions.php");
 
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
@@ -35,6 +36,13 @@
       // insert food into meal
     } else {
       
+      $foodItem = [];
+      $foodItem['foodName'] = $_POST['foodName'];
+      $foodItem['gramsPerCalorie'] = $_POST['gramsPerCalorie'];
+      $foodItem['gramsPerServing'] = $_POST['gramsPerServing'];
+      
+      insertFoodItem($foodItem);
+      /*
       $sql = "INSERT INTO Foods ";
       $sql .= "(FoodName, GramsPerServing, CaloriesPerGram) ";
       $sql .= "VALUES (";
@@ -51,7 +59,7 @@
           db_disconnect($conn);
           exit;
       }
-
+*/
     }
   }
   // send user to appropriate page
