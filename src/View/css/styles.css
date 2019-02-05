@@ -123,7 +123,7 @@ aside#food{
     height: 355px;
 }
 
-div#foodlist_item{
+.foodlist_item{
     height: 100px;
     padding: 2px;
     border-style: solid;
@@ -157,14 +157,14 @@ img#favorite{
     height: 75px;
 }
 
-.foodlist_item{
+.foodlist_itemProperty{
     float: right;
     width: 75%;
     margin: 5px 5px;
     text-align: center;
 }
 
-.foodlist_itemname{
+.foodlist_itemName{
     
     font-size: 1.25em;
     font-weight: bold;
@@ -427,8 +427,6 @@ iframe {
     
 }
 
-
-}
 
 /*++++++Typography+++++++++*/   
 @font-face{

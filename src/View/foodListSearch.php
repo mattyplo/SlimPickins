@@ -23,13 +23,13 @@
         while($row = $result->fetch_assoc()){
             echo 
             '
-            <div id="'.$row[foodName].'">
+            <div class="foodlist_item">
             <a id="'.$row[foodName].'" href="food_item.php?foodName="'.$row[foodName].'>
-            <img class="foodicon" src="images/placeholder.jpg" alt="Food Icon">
-            <div class=foodlist_item>
+            <img class="foodicon" src="images/placeholder.png" alt="Food Icon">
+            <div class=foodlist_itemProperty>
                 <ul>
-                    <il> '.$row[FoodName].' </il>
-                    <il> Calories '.$row[CaloriesPerGram].' per gram</il>
+                    <il class="foodlist_itemName"> '.$row[FoodName].' </il> </br></br>
+                    <il> Calories '.$row[CaloriesPerGram].' per gram</il> </br>
                     <il> Serving Size: '.$row[GramsPerServing].' </il>
             </div>
             </a>
