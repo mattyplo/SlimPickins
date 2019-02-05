@@ -1,0 +1,8 @@
+Please write down the issues you find about formhandling down under:
+
+Favorite button on foodaside.php needs implementation.
+Add Item button on foodaside.php needs implementation.
+Edit Item button on foodaside.php needs implementation.
+Delete Item button on foodaside.php needs implementation.
+fooditem.php needs to be connected with user table and current login user.
+profile form on profile.php needs implementation.

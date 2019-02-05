@@ -1,0 +1,3 @@
+Please write down the issues you find about data model down under:
+
+Category/type attribute may be needed for foods table.
