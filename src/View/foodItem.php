@@ -16,10 +16,20 @@ echo
 ';
 $sql = "SELECT MealDate, MealName FROM foods JOIN mealsfoods USING (FoodID) JOIN meals USING (MealID) JOIN mealtypes USING (MealTypeID) WHERE FoodID = ".$result[FoodID].";";
 $result = $conn->query($sql)->fetch_assoc();
-echo
-' 
-    <li> Last Time Eaten: '.$result[Date].' for '.$result[MealName].'</li> 
-    <li> Season:</li> 
-</ul>
-';
+
+if ($result[MealDate] != NULL){
+    echo
+    ' 
+        <li> Last Time Eaten: '.$result[Date].' for '.$result[MealName].'</li> 
+        <li> Season:</li> 
+    </ul>
+    ';
+} else {
+    echo
+    '
+    <li> You have never try this yet.</li> 
+    </ul>
+    ';
+}
+
 ?>
