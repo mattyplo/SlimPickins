@@ -18,7 +18,7 @@
         <div class="content">
         <main id = food>
             <div id="fooditem">
-                <?php require_once 'foodItem.php' ?>
+                <?php require_once '../Controller/foodItem.php' ?>
             </div>
         </main>
 

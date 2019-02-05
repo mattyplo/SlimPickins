@@ -25,7 +25,7 @@
             </form>
             
             
-            <?php require_once 'foodListSearch.php' ?>
+            <?php require_once '../Controller/foodListSearch.php' ?>
 
         </main>
 

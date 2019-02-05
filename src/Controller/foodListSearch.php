@@ -1,5 +1,5 @@
 <?php 
-    require('../Controller/credentials.php');
+    require('credentials.php');
 
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -19,8 +19,8 @@
 
     if ($result ->num_rows > 0){
         while($row = $result->fetch_assoc()){
-            $get_foodName = $row[FoodName];
-            $get_foodID = $row[FoodID];
+            $get_foodName = $row['FoodName'];
+            $get_foodID = $row['FoodID'];
             echo 
             '
             <div class="foodlist_item">
@@ -29,8 +29,8 @@
             <div class=foodlist_itemProperty>
                 <ul>
                     <il class="foodlist_itemName"> '.$get_foodName.' </il> </br></br>
-                    <il> Calories '.$row[CaloriesPerGram].' per gram</il> </br>
-                    <il> Serving Size: '.$row[GramsPerServing].' </il>
+                    <il> Calories '.$row['CaloriesPerGram'].' per gram</il> </br>
+                    <il> Serving Size: '.$row['GramsPerServing'].' </il>
             </div>
             </a>
             </div>';
