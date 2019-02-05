@@ -17,6 +17,8 @@
 
         <div class="content">
         <main id = food>
+
+            <?php require_once 'foodListSearch.php' ?>
             <!-- <form id=search name=searchbar onsubmit= "acknowledge()" method = "POST">
                 <input type="text" name="search" placeholder="What's for dinner?" size="100">
                 <input type="submit" value="search">

@@ -1,13 +1,5 @@
 <?php 
-    // require('credentials.php');
-
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+    require('../Controller/credentials.php');
 
     echo
     '
@@ -19,7 +11,6 @@
 
     $get_foodSearch = "'".$_GET."'";
 
-    $sql = "INSERT INTO 'Foods' VALUES ('Pizza',3.00,107.00),('Kale',2.03,67.00),('Bacon',3.85,26.00),('Yoghurt',1.00,245.00),('Carrot',2.44,61.00)";
     $sql = "SELECT foodName, calories, servingSize FROM FOODS WHERE foodName LIKE ". $get_foodSearch. ";";
     $result = $conn->query($sql);
 
