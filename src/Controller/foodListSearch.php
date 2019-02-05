@@ -1,13 +1,5 @@
 <?php 
-    require('credentials.php');
-
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+    require('dbConnection.php');
 
     $get_foodSearch = implode(array_values($_GET));
 
@@ -25,7 +17,7 @@
             '
             <div class="foodlist_item">
             <a id="'.$get_foodName.'" href="food_item.php?foodName='.$get_foodName.'&FoodID='.$get_foodID.'">
-            <img class="foodicon" src="images/placeholder.png" alt="Food Icon">
+            <img class="foodicon" src="../View/images/placeholder.png" alt="Food Icon">
             <div class=foodlist_itemProperty>
                 <ul>
                     <il class="foodlist_itemName"> '.$get_foodName.' </il> </br></br>

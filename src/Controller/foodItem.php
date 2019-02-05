@@ -1,5 +1,5 @@
 <?php
-require('../Controller/dbConnection.php');
+require('dbConnection.php');
 
 $get_foodName = $_GET['foodName'];
 
