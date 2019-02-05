@@ -17,7 +17,7 @@
 
         <div class="content">
         <main id = food>
-            <form id=search name=searchbar onsubmit= "acknowledge()" method = "POST">
+            <!-- <form id=search name=searchbar onsubmit= "acknowledge()" method = "POST">
                 <input type="text" name="search" placeholder="What's for dinner?" size="100">
                 <input type="submit" value="search">
             </form>
@@ -25,7 +25,7 @@
             <div id="foodlist">
                 <?php require_once 'foodlist.php' ?>
 
-            </div>
+            </div> -->
         </main>
 
         <aside id = food>
