@@ -30,17 +30,7 @@
         </main>
 
         <aside id = food>
-            <button onclick = "acknowledge()" id="favorite">
-            <img id="favorite" src="images/star.jpg" alt="add to favorite"> <!-- should be replace by code enable favorited item change to solid star-->
-            </button> 
-            <button id="addItem">Add Item</button>
-              
-            <button onclick = "acknowledge()" id="editItem">
-            Edit Item <!-- should be replace by code enable favorited item change to solid star-->
-            </button> 
-            <button onclick = "acknowledge()" id="deleteItem">
-            Delete Item <!-- should be replace by code enable favorited item change to solid star-->
-            </button> 
+            <?php include_once 'foodaside.php' ?>
         </aside>
         </div>
 

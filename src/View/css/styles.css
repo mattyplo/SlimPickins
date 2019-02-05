@@ -82,7 +82,7 @@ aside{
     clear:both;
 }
 
-form#login {
+div#login {
     margin: 45% 0;    
 }
 
@@ -115,12 +115,26 @@ main h1 {
 
 main#food{
     width: 75%;
-
+    clear: none;
 }
 
 aside#food{
     width: 25%;
-    height: 355px;
+    clear: right;
+    padding: 5px;
+    margin-top: 27px;
+}
+
+main#landing{
+    clear: none;
+}
+
+aside#landing{
+    clear: none;
+}
+
+ul#foodasidelist{
+    list-style-type: none;
 }
 
 .foodlist_item{
@@ -131,17 +145,17 @@ aside#food{
     margin: 1px;
 }
 
-button#editItem, button#deleteItem{
-    padding: 15px 30px;
+button#addItem,button#editItem, button#deleteItem{
+    padding: 15px 25px;
     margin: 5px 0;
 }
 
 button#editItem{
-    padding: 15px 38px;
+    padding: 15px 25px;
 }
 
 button#favorite{
-    margin: 100px 0 5px 0;
+    margin: 5px 0 5px 0;
     height: 123px;
 }
 
@@ -175,7 +189,6 @@ iframe{
 }
 
 div#foodlist{
-    background-color: aqua;
     overflow: scroll;
     width: 100%;
     margin: 15px 0 0 0;
@@ -183,7 +196,6 @@ div#foodlist{
 }
 
 div#fooditem{
-    background-color: aqua;
     overflow: auto;
     width: 75%;
     margin: 15px 0 0 0;

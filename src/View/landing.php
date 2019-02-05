@@ -16,7 +16,7 @@
         </header>
 
         <div class="content">
-        <main>
+        <main id="landing">
             <p>Welcome to Slim Pickins Calorie Counter! Research shows that people who log calories lose more weight and are more likely to keep the weight off over time. Let us help you with our easy-to-use diary layout and highly customizable database.
             </p>
             
@@ -27,19 +27,20 @@
             </p>
         </main>
 
-        <aside>
-            <form id = login name = "login" action = "../Controller/welcome.php" onsubmit = "return validateForm()" method = "POST">
-                <input type="text" name="userName" placeholder="User Name"><br>
-                <br>
-                <input type="password" name="password" placeholder="Password"><br>
-                <br>
-                <input type="submit" value="Log In"> 
-            </form>
-            
-            <form id="newUser" name = "newUser" action ="newUser.php" method="POST">
-                <input type="submit" value ="New User">
-            
-            </form>
+        <aside id="landing">
+            <div id="login">
+                <form id = login name = "login" action = "../Controller/welcome.php" onsubmit = "return validateForm()" method = "POST">
+                    <input type="text" name="userName" placeholder="User Name"><br>
+                    <br>
+                    <input type="password" name="password" placeholder="Password"><br>
+                    <br>
+                    <input type="submit" value="Log In"> 
+                </form>
+                </br>
+                <form id="newUser" name = "newUser" action ="newUser.php" method="POST">
+                    <input type="submit" value ="New User">
+                </form>
+            </div>
         </aside>
         </div>
 
