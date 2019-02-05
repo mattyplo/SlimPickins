@@ -24,9 +24,9 @@
                 <input type="submit" value="search">
             </form>
             
-            <div id="foodlist">
-               <?php require_once 'foodListSearch.php' ?>
-            </div>
+            
+            <?php require_once 'foodListSearch.php' ?>
+
         </main>
 
         <aside id = food>

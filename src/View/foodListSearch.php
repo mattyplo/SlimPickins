@@ -11,24 +11,24 @@
 
     $get_foodSearch = implode(array_values($_GET));
 
-    error_log(print_r($get_foodSearch, TRUE)); 
-
-    $sql = "SELECT FoodName, GramsPerServing, CaloriesPerGram FROM FOODS WHERE FoodName LIKE '". $get_foodSearch. "' ;";
-    error_log(print_r($sql, TRUE)); 
+    $sql = "SELECT FoodID, FoodName, GramsPerServing, CaloriesPerGram FROM FOODS WHERE FoodName LIKE '". $get_foodSearch. "' ;";
     $result = $conn->query($sql);
+    error_log(print_r($result, TRUE));
 
     echo '<div id="foodlist">';
 
     if ($result ->num_rows > 0){
         while($row = $result->fetch_assoc()){
+            $get_foodName = $row[FoodName];
+            $get_foodID = $row[FoodID];
             echo 
             '
             <div class="foodlist_item">
-            <a id="'.$row[foodName].'" href="food_item.php?foodName="'.$row[foodName].'>
+            <a id="'.$get_foodName.'" href="food_item.php?foodName='.$get_foodName.'&FoodID='.$get_foodID.'">
             <img class="foodicon" src="images/placeholder.png" alt="Food Icon">
             <div class=foodlist_itemProperty>
                 <ul>
-                    <il class="foodlist_itemName"> '.$row[FoodName].' </il> </br></br>
+                    <il class="foodlist_itemName"> '.$get_foodName.' </il> </br></br>
                     <il> Calories '.$row[CaloriesPerGram].' per gram</il> </br>
                     <il> Serving Size: '.$row[GramsPerServing].' </il>
             </div>

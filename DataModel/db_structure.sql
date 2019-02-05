@@ -1,3 +1,8 @@
+DROP SCHEMA IF EXISTS slimp;
+CREATE SCHEMA slimp;
+USE slimp;
+
+
 CREATE TABLE `Foods` (
   `FoodID` int(11) NOT NULL,
   `FoodName` varchar(255) NOT NULL,
@@ -13,7 +18,7 @@ CREATE TABLE `Foods` (
 
 CREATE TABLE `Meals` (
   `MealID` int(11) NOT NULL,
-  `Date` date NOT NULL,
+  `MealDate` date NOT NULL,
   `MealTypeID` int(11) NOT NULL,
   `UserID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

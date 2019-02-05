@@ -12,13 +12,13 @@
 <body>
     <div class="wrapper">
         <header>
-            <?php require_once 'php/header.php'; ?>  
+            <?php require_once 'header.php'; ?>  
         </header>
 
         <div class="content">
         <main id = food>
             <div id="fooditem">
-                <?php require_once 'php/foodItem.php' ?>
+                <?php require_once 'foodItem.php' ?>
             </div>
         </main>
 
@@ -36,7 +36,7 @@
         </div>
 
         <footer>            
-            <?php require_once 'php/footer.php' ?>        
+            <?php require_once 'footer.php' ?>        
         </footer>
     </div>
 </body> 
