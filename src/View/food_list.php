@@ -18,16 +18,15 @@
         <div class="content">
         <main id = food>
 
-            <?php require_once 'foodListSearch.php' ?>
-            <!-- <form id=search name=searchbar onsubmit= "acknowledge()" method = "POST">
+            
+            <form id=search name=searchbar method = "GET">
                 <input type="text" name="search" placeholder="What's for dinner?" size="100">
                 <input type="submit" value="search">
             </form>
-            <!--  autogenerate search result list of items -->
+            
             <div id="foodlist">
-                <?php require_once 'foodlist.php' ?>
-
-            </div> -->
+               <?php require_once 'foodListSearch.php' ?>
+            </div>
         </main>
 
         <aside id = food>

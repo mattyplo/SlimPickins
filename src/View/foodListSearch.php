@@ -1,17 +1,20 @@
 <?php 
     require('../Controller/credentials.php');
 
-    echo
-    '
-    <form id=search name=foodSearch action="foodListSearch.php" method = "GET">
-    <input type="text" name="search" placeholder="apple" size="100">
-    <input type="submit" value="search">
-    </form>
-    ';
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
-    $get_foodSearch = "'".$_GET."'";
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
 
-    $sql = "SELECT foodName, calories, servingSize FROM FOODS WHERE foodName LIKE ". $get_foodSearch. ";";
+    $get_foodSearch = implode(array_values($_GET));
+
+    error_log(print_r($get_foodSearch, TRUE)); 
+
+    $sql = "SELECT FoodName, GramsPerServing, CaloriesPerGram FROM FOODS WHERE FoodName LIKE '". $get_foodSearch. "' ;";
+    error_log(print_r($sql, TRUE)); 
     $result = $conn->query($sql);
 
     echo '<div id="foodlist">';
@@ -25,9 +28,9 @@
             <img class="foodicon" src="images/placeholder.jpg" alt="Food Icon">
             <div class=foodlist_item>
                 <ul>
-                    <il> '.$row[foodName].' </il>
-                    <il> Calories '.$row[calories].' per gram</il>
-                    <il> Serving Size: '.$row[servingSize].' </il>
+                    <il> '.$row[FoodName].' </il>
+                    <il> Calories '.$row[CaloriesPerGram].' per gram</il>
+                    <il> Serving Size: '.$row[GramsPerServing].' </il>
             </div>
             </a>
             </div>';
