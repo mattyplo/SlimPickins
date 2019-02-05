@@ -1,3 +1,4 @@
 Please write down the issues you find about data model down under:
 
 Category/type attribute may be needed for foods table.
+We need full set of mock data to fill all the tables so we can do full functional testing on the project.
