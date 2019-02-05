@@ -1,0 +1,1 @@
+INSERT INTO MealTypes (MealName) VALUES ('Breakfast'), ('Lunch'), ('Dinner'), ('Snack');

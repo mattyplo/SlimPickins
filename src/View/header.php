@@ -1,3 +1,10 @@
+<?php
+  require "../Model/MockFoodItemsData.php";
+  require "../Model/renderMockData.php";
+  require "../Model/MockMealsData.php";
+  require "../Controller/dbconnection.php";
+?>
+
 <div id = "header">
 
     <a class="logo" href = "index.php"><h1 class="logo">Slim Pickins</h1></a>

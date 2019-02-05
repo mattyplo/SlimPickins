@@ -11,12 +11,6 @@ body {
     font-family:modern_sans_light;    
 }
 
-body.home #wrapper {
-    /*width:940px;*/
-    width: 78%;
-    max-width:1100px;
-    margin:109px auto 0 auto;
-}
 
 body.home nav#primary li:nth-child(0), 
 
@@ -26,12 +20,6 @@ header{
     left:0;
     background:rgba(255, 255, 255,.8);
     overflow: hidden;
-    border-bottom: 2px;
-    border-bottom: 3px solid rgba(102, 6, 6, 0.94); 
-}
-
-header#index{
-    position:fixed; 
 }
 
 nav#primary{
@@ -48,7 +36,7 @@ nav#primary li{
 }
 
 nav#primary ul {
-    width:89%;
+    width:100%;
     margin:0 auto;
     max-width:1100px;
 }
@@ -59,14 +47,15 @@ nav#primary a{
 }
 
 nav#primary a:hover{
-    background:#F1948A;
+    background:darkseagreen;
     display:block;
     color:#fff;
 }
 
 .active{
-    background:#F1948A;
+    background:darkseagreen;
     display:block;
+    color:#fff;
 }
 
 .wrapper{
@@ -90,10 +79,11 @@ aside{
     width: 50%;
     background-color: white;
     text-align: center;
+    clear:both;
 }
 
 form#login {
-    margin: 45% 0;
+    margin: 45% 0;    
 }
 
 div#profile_fill{
@@ -133,7 +123,7 @@ aside#food{
     height: 355px;
 }
 
-div#foodlist_item{
+.foodlist_item{
     height: 100px;
     padding: 2px;
     border-style: solid;
@@ -167,14 +157,14 @@ img#favorite{
     height: 75px;
 }
 
-.foodlist_item{
+.foodlist_itemProperty{
     float: right;
     width: 75%;
     margin: 5px 5px;
     text-align: center;
 }
 
-.foodlist_itemname{
+.foodlist_itemName{
     
     font-size: 1.25em;
     font-weight: bold;
@@ -281,7 +271,7 @@ h1 {
 }
 
 .logo{
-    font-size:1.6em;
+    font-size:1.8em;
     text-align:center;
     text-decoration:none;
     margin:8px auto;
@@ -313,10 +303,6 @@ h4 {
     
 }
 
-p.valid{
-    width:50px;
-    margin:0 auto 20px auto;
-}
 
 iframe {
     width:auto;
@@ -397,15 +383,11 @@ iframe {
   display: none;
 }
 @media screen and (max-width:800px) {
-        body.home #wrapper {
+        body #wrapper {
         /*width:940px;*/
         width: 95%;    
     }
 
-    body.inner #wrapper {
-        /*width:940px;*/
-        width:95%;    
-    }
     
     nav#primary ul {
         /*width: 1100px;*/
@@ -430,14 +412,21 @@ iframe {
 
 }
 
-@media screen and (max-width:700px){
-    main{
-        /* width:560px; 560px divided by 940px*/   
-        width:auto;
-        float:none; 
+@media screen and (max-width:800px){
+    
+    #wrapper {
+        width:95%;
     }
     
+    main{
+        /* width:560px; 560px divided by 940px*/   
+        width:56.57%;    
+    }
+    
+
+    
 }
+
 
 /*++++++Typography+++++++++*/   
 @font-face{

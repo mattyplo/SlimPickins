@@ -12,26 +12,29 @@
 <body>
     <div class="wrapper">
         <header>
-            <?php require_once 'php/header.php'; ?>  
+            <?php require_once 'header.php'; ?>  
         </header>
 
         <div class="content">
         <main id = food>
-            <form id=search name=searchbar onsubmit= "acknowledge()" method = "POST">
+
+            
+            <form id=search name=searchbar method = "GET">
                 <input type="text" name="search" placeholder="What's for dinner?" size="100">
                 <input type="submit" value="search">
             </form>
-            <!--  autogenerate search result list of items -->
-            <div id="foodlist">
-                <?php require_once 'php/foodlist.php' ?>
+            
+            
+            <?php require_once '../Controller/foodListSearch.php' ?>
 
-            </div>
         </main>
 
         <aside id = food>
             <button onclick = "acknowledge()" id="favorite">
             <img id="favorite" src="images/star.jpg" alt="add to favorite"> <!-- should be replace by code enable favorited item change to solid star-->
             </button> 
+            <button id="addItem">Add Item</button>
+              
             <button onclick = "acknowledge()" id="editItem">
             Edit Item <!-- should be replace by code enable favorited item change to solid star-->
             </button> 
@@ -42,7 +45,7 @@
         </div>
 
         <footer>            
-            <?php require_once 'php/footer.php' ?>        
+            <?php require_once 'footer.php' ?>        
         </footer>
     </div>
 </body> 
