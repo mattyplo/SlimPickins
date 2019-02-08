@@ -33,6 +33,19 @@ function insertMeal($meal) {
  
 }
 
+function insertMealsFoods($data) {
+  
+  global $conn;
+  
+  $sql = "INSERT INTO MealsFoods ";
+  $sql .= "(MealID, FoodID, GramsConsumed) ";
+  $sql .= "VALUES (";
+  $sql .= $data['mealID'] . ", ";
+  $sql .= $data['foodID'] . ", ";
+  $sql .= $data['gramsConsumed'] . ")";
+  mysqli_query($conn, $sql);
+}
+
 function insertUser($user) {
   
   global $conn;

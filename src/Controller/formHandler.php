@@ -26,8 +26,11 @@
     $meal['userID'] = 2;
     
     insertMeal($meal);
-    $newMealID = mysqli_insert_id($conn);
-    $newFoodID = '';
+    
+    // To be used to create a new MealsFoods entity
+    $mealsFoods = [];
+    // capture the new ID created from new meal insert
+    $mealsFoods['mealID'] = mysqli_insert_id($conn);
     
     // handlers the creation of a new food item
     if ($_POST['newOrExisting'] == "existing") {
@@ -40,19 +43,19 @@
       $foodItem['gramsPerServing'] = $_POST['gramsPerServing'];
       
       insertFoodItem($foodItem);
-      $newFoodID = mysqli_insert_id($conn);
-  
+      // capture the new ID created from new food insert
+      $mealsFoods['foodID'] = mysqli_insert_id($conn);
+      
+      
     }
     
     
     // Need to grab new mealID and new foodID to use to insert into mealsFoods
-    $sql = "INSERT INTO MealsFoods ";
-    $sql .= "(MealID, FoodID, GramsConsumed) ";
-    $sql .= "VALUES (";
-    $sql .= $newMealID . ", ";
-    $sql .= $newFoodID . ", ";
-    $sql .= 100 . ")";
-    mysqli_query($conn, $sql);
+    // this line to be replaced with user input
+    $mealsFoods['gramsConsumed'] = 100; 
+    insertMealsFoods($mealsFoods);
+    
+    
   }
   // send user to appropriate page
   header("Location: ../View/index.php");
