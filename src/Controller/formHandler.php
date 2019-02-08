@@ -23,7 +23,7 @@
     $meal = [];
     $meal['date'] = $_POST['date'];
     $meal['mealType'] = $mealType;
-    $meal['userID'] = 1;
+    $meal['userID'] = 2;
     
     insertMeal($meal);
 
