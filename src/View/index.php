@@ -74,6 +74,9 @@
             <label for="gramsPerServing"><b>Grams Per Serving</b></label>
             <input type="number" name="gramsPerServing" step="0.01">
             
+            <label for="gramsConsumed"><b>Grams Consumed</b></label>
+            <input type="number" name="gramsConsumed">
+            
             <br>
             <br>
             <button type="submit" class="btn">Add Meal</button>

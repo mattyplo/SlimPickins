@@ -52,7 +52,7 @@
     
     // Need to grab new mealID and new foodID to use to insert into mealsFoods
     // this line to be replaced with user input
-    $mealsFoods['gramsConsumed'] = 100; 
+    $mealsFoods['gramsConsumed'] = $_POST['gramsConsumed']; 
     insertMealsFoods($mealsFoods);
     
     
