@@ -1,6 +1,6 @@
 <?php
 
-  require("dbconnection.php");
+  require("dbConnection.php");
   require("../Model/queryFunctions.php");
 
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -26,7 +26,8 @@
     $meal['userID'] = 2;
     
     insertMeal($meal);
-
+    $newMealID = mysqli_insert_id($conn);
+    $newFoodID = '';
     
     // handlers the creation of a new food item
     if ($_POST['newOrExisting'] == "existing") {
@@ -39,8 +40,19 @@
       $foodItem['gramsPerServing'] = $_POST['gramsPerServing'];
       
       insertFoodItem($foodItem);
+      $newFoodID = mysqli_insert_id($conn);
   
     }
+    
+    
+    // Need to grab new mealID and new foodID to use to insert into mealsFoods
+    $sql = "INSERT INTO MealsFoods ";
+    $sql .= "(MealID, FoodID, GramsConsumed) ";
+    $sql .= "VALUES (";
+    $sql .= $newMealID . ", ";
+    $sql .= $newFoodID . ", ";
+    $sql .= 100 . ")";
+    mysqli_query($conn, $sql);
   }
   // send user to appropriate page
   header("Location: ../View/index.php");
