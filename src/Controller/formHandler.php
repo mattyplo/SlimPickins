@@ -1,5 +1,7 @@
 <?php
 
+  // Will need to check inputs for single quotes, as they will throw an error without escaping them.
+
   require("dbConnection.php");
   require("../Model/queryFunctions.php");
 
@@ -57,6 +59,7 @@
     
     
   }
+
   // send user to appropriate page
   header("Location: ../View/index.php");
 ?>

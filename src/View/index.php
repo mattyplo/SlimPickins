@@ -24,7 +24,10 @@
     <div class="wrapper">
         
     <header>        
-        <?php require_once 'header.php'; ?>        
+        <?php
+          require_once 'header.php';
+          require_once '../Model/journalModel.php'
+        ?>        
      </header>
 
          <main>
@@ -60,7 +63,7 @@
               <br>
               <select name="newFoodName">
                 <?php
-                  foreach ($mockDBQuery as $item) {
+                  foreach ($userMeals as $item) {
                     echo renderFoodItemToOption($item) ;
                   }
                 ?>
