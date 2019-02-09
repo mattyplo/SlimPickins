@@ -62,6 +62,13 @@ function insertUser($user) {
   
 }
 
+function verifyNewUniqueUser($user) {
+  global $conn;
+  $sql = "SELECT UserName FROM Users WHERE UserName = '";
+  $sql .= $user['userName'] . "';";
+  return mysqli_query($conn, $sql);
+}
+
 function selectUser($user) {
   
   global $conn;
