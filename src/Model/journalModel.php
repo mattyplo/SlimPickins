@@ -32,10 +32,17 @@ WHERE MEALID = ";
     $foodNameRow = mysqli_fetch_row($foodItemResult);
     $foodName = $foodNameRow[0];
     
+    // Grab each meal type and convert it into mealName
+    $sql = "SELECT MealName FROM MealTypes WHERE MealTypeID = ";
+    $sql .= (int)$val['MealTypeID'];
+    $mealTypeResult = mysqli_query($conn, $sql);
+    $mealTypeRow = mysqli_fetch_row($mealTypeResult);
+    $mealType = $mealTypeRow[0];
+    
     $meals[$meal] = $val['MealID'];
     $meals[$meal] = [];
     $meals[$meal]['date'] = $val['Date'];
-    $meals[$meal]['mealType'] = $val['MealTypeID'];
+    $meals[$meal]['mealType'] = $mealType;
     $meals[$meal]['foodName'] = $foodName;
     /*foreach ($mealFoods as $food) {
       $meals[$meal]['$food'] = $food;
