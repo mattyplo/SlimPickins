@@ -1,5 +1,6 @@
 <?php
 
+ob_start();
 require("../Controller/dbConnection.php");
 
 function insertFoodItem($foodItem) {
