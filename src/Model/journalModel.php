@@ -77,8 +77,8 @@ WHERE MEALID = ";
       $option_mid = "'>";
       $option_end = "</option>";
       $foodName = $dataArray['FoodName'];
-      
-      return $option_start . $foodName . $option_mid . $foodName . $option_end;
+      $foodID = $dataArray['FoodID'];
+      return $option_start . $foodID . $option_mid . $foodName . $option_end;
     }
   }
 

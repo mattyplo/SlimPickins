@@ -62,7 +62,7 @@
             
             <div id="existing">
               <br>
-              <select name="newFoodName">
+              <select name="FoodID">
                 <?php
                   foreach ($allFoods as $food) {
                   echo renderFoodToOption($food);
