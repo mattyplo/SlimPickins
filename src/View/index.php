@@ -96,9 +96,10 @@
             echo $key . "</h3><ul>";
 
             foreach($val as $k=>$v){ 
-                
-                echo "<li>" . $v . "</li>";
-               
+                echo $k;
+              foreach($v as $f){
+                echo "<li>" . $f . "</li>";
+              }
             }
 
             echo "</ul></div>";

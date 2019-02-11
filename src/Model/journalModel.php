@@ -10,7 +10,7 @@
   
   // This function will sort the meals array by date
   function date_compare($a, $b) {
-      var_dump($a);
+      //var_dump($a);
       $t1 = strtotime($a);
       $t2 = strtotime($b);
       // The negative in front the result sorts by the most recent entry
@@ -40,6 +40,24 @@ WHERE MEALID = ";
     $mealTypeRow = mysqli_fetch_row($mealTypeResult);
     $mealType = $mealTypeRow[0];
     
+    $date = $val['Date'];
+    
+    //$meals[$val['Date']] = [];
+    if (!array_key_exists($date, $meals)) {
+      $meals[$date] = [];
+      if (!array_key_exists($mealType, $meals[$date])){
+        $meals[$date][$mealType] = [];
+        array_push($meals[$date][$mealType], $foodName);
+        
+        //$meals[$date]['foodName'] = $foodName;
+      }
+    } else { 
+        if (!array_key_exists($mealType, $meals[$date])){
+        $meals[$date][$mealType] = [];
+        array_push($meals[$date][$mealType], $foodName);
+        }
+    }
+    
     
     //  Build a Date class !!!
     
@@ -53,7 +71,7 @@ WHERE MEALID = ";
     }*/
     
     //$date = $val['Date'];
-    $meals[$val['Date']] = [];
+    //$meals[$val['Date']] = [];
     //var_dump($meals);
     //$meals[$meal] = $val['MealID'];
     /*$meals[$meal] = [];
