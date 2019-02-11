@@ -65,4 +65,21 @@ WHERE MEALID = ";
   
   uksort($meals, 'date_compare');
 
+/********************** Existing Food Item options **************/
+
+  $sql = "SELECT * FROM foods;";
+  $allFoods = mysqli_query($conn, $sql);
+
+  function renderFoodToOption($dataArray) {
+    if (!(empty($dataArray["FoodName"]))) {
+
+      $option_start = "<option value='";
+      $option_mid = "'>";
+      $option_end = "</option>";
+      $foodName = $dataArray['FoodName'];
+      
+      return $option_start . $foodName . $option_mid . $foodName . $option_end;
+    }
+  }
+
 ?>
