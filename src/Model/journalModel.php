@@ -57,35 +57,8 @@ WHERE MEALID = ";
         array_push($meals[$date][$mealType], $foodName);
         }
     }
-    
-    
-    //  Build a Date class !!!
-    
-   /* if (!array_key_exists($date, $meals)) {
-      $meals[$date] = [];
-      $meals[$date]['date'] = $date;
-      if (!array_key_exists($mealType, $meals[$date])){
-        $meals[$date][$mealType] = $foodName;
-        //$meals[$date]['foodName'] = $foodName;
-      }
-    }*/
-    
-    //$date = $val['Date'];
-    //$meals[$val['Date']] = [];
-    //var_dump($meals);
-    //$meals[$meal] = $val['MealID'];
-    /*$meals[$meal] = [];
-    $meals[$meal]['date'] = $val['Date'];
-    $meals[$meal]['mealType'] = $mealType;
-    $meals[$meal]['foodName'] = $foodName;*/
-    
-    /*foreach ($mealFoods as $food) {
-      $meals[$meal]['$food'] = $food;
-    }*/
-    
   }
   
-  //var_dump($meals);
   uksort($meals, 'date_compare');
-  //var_dump($meals);
+
 ?>

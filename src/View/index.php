@@ -88,15 +88,11 @@
         </div>
            
         <?php
-          //renderMealsToPage($mockMealQuery);
-           //var_dump($meals);
-           foreach($meals as $key=>$val){ 
-          
+          foreach($meals as $key=>$val){ 
             echo "<div><h3>";
             echo $key . "</h3><ul>";
-
             foreach($val as $k=>$v){ 
-                echo $k;
+              echo "<li><h4>" . $k . "</h4></li>";
               foreach($v as $f){
                 echo "<li>" . $f . "</li>";
               }
