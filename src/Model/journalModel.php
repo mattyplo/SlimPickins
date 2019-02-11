@@ -10,8 +10,9 @@
   
   // This function will sort the meals array by date
   function date_compare($a, $b) {
-      $t1 = strtotime($a['date']);
-      $t2 = strtotime($b['date']);
+      var_dump($a);
+      $t1 = strtotime($a);
+      $t2 = strtotime($b);
       // The negative in front the result sorts by the most recent entry
       return -($t1 - $t2);
   }    
@@ -39,16 +40,34 @@ WHERE MEALID = ";
     $mealTypeRow = mysqli_fetch_row($mealTypeResult);
     $mealType = $mealTypeRow[0];
     
-    $meals[$meal] = $val['MealID'];
-    $meals[$meal] = [];
+    
+    //  Build a Date class !!!
+    
+   /* if (!array_key_exists($date, $meals)) {
+      $meals[$date] = [];
+      $meals[$date]['date'] = $date;
+      if (!array_key_exists($mealType, $meals[$date])){
+        $meals[$date][$mealType] = $foodName;
+        //$meals[$date]['foodName'] = $foodName;
+      }
+    }*/
+    
+    //$date = $val['Date'];
+    $meals[$val['Date']] = [];
+    //var_dump($meals);
+    //$meals[$meal] = $val['MealID'];
+    /*$meals[$meal] = [];
     $meals[$meal]['date'] = $val['Date'];
     $meals[$meal]['mealType'] = $mealType;
-    $meals[$meal]['foodName'] = $foodName;
+    $meals[$meal]['foodName'] = $foodName;*/
+    
     /*foreach ($mealFoods as $food) {
       $meals[$meal]['$food'] = $food;
     }*/
     
   }
-
-  usort($meals, 'date_compare');
+  
+  //var_dump($meals);
+  uksort($meals, 'date_compare');
+  //var_dump($meals);
 ?>
