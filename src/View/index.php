@@ -32,7 +32,7 @@
 
          <main>
         
-        <button id="addMeal">Add Meal</button>
+             <button id="addMeal">Add Meal</button>
         
         <div class="form-popup" id="myForm">
           <form action="../Controller/formHandler.php" class="form-container" method="post">

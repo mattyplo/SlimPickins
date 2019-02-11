@@ -36,7 +36,7 @@
                     <br>
                     <input type="submit" value="Log In"> 
                 </form>
-                </br>
+                <br>
                 <form id="newUser" name = "newUser" action ="newUser.php" method="POST">
                     <input type="submit" value ="New User">
                 </form>
