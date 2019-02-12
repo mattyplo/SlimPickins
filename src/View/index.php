@@ -72,14 +72,21 @@
               <br>
             </div>
             
+            <ul>
+            <li>
             <label for="gramsPerCalorie"><b>Grams Per Calorie</b></label>
             <input type="number" name="gramsPerCalorie" step="0.01">
+            </li>
+            <li>
             <label for="gramsPerServing"><b>Grams Per Serving</b></label>
             <input type="number" name="gramsPerServing" step="0.01">
-            
+            </li>
+            <li>
             <label for="gramsConsumed"><b>Grams Consumed</b></label>
             <input type="number" name="gramsConsumed">
-            
+            </li>
+            </ul>
+
             <br>
             <br>
             <button type="submit" class="btn">Add Meal</button>

@@ -3,7 +3,7 @@
 
     $get_foodSearch = implode(array_values($_GET));
 
-    $sql = "SELECT FoodID, FoodName, GramsPerServing, CaloriesPerGram FROM FOODS WHERE FoodName LIKE '". $get_foodSearch. "' ;";
+    $sql = "SELECT FoodID, FoodName, GramsPerServing, CaloriesPerGram FROM FOODS WHERE FoodName LIKE '%". $get_foodSearch. "%' ;";
     $result = $conn->query($sql);
     error_log(print_r($result, TRUE));
 

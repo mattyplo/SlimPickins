@@ -41,7 +41,7 @@
       
       $foodItem = [];
       $foodItem['foodName'] = $_POST['foodName'];
-      $foodItem['gramsPerCalorie'] = $_POST['gramsPerCalorie'];
+      $foodItem['caloriesPerGram'] = $_POST['caloriesPerGram'];
       $foodItem['gramsPerServing'] = $_POST['gramsPerServing'];
       
       insertFoodItem($foodItem);

@@ -11,7 +11,7 @@ function insertFoodItem($foodItem) {
   $sql .= "(FoodName, GramsPerServing, CaloriesPerGram) ";
   $sql .= "VALUES (";
   $sql .= "'" . $foodItem['foodName'] . "',";
-  $sql .= $foodItem['gramsPerCalorie'] . ",";
+  $sql .= $foodItem['CaloriesPerGram'] . ",";
   $sql .= $foodItem['gramsPerServing'];
   $sql .= ")";
   mysqli_query($conn, $sql);
@@ -73,6 +73,25 @@ function selectUser($user) {
   $sql .= $user['password'] . "';";
   return mysqli_query($conn, $sql);
 
+}
+
+function verifyFood($foodItem) {
+
+  global $conn;
+
+  $sqlFoodExist = "SELECT IF(COUNT(FoodName)>0, 'true', 'false') FROM foods WHERE FoodName = '";
+  $sqlFoodExist .= $foodItem['foodName']."';";
+  return mysqli_query($conn, $sqlFoodExist);
+}
+
+function updateFoodItem($foodItem){
+
+  global $conn;
+
+  $sql = "UPDATE foods SET GramPerServing =";
+  $sql .= $foodItem['gramsPerServing'].", CaloriesPerGram =";
+  $sql .= $foodItem['caloriesPerGram'];
+  return mysqli_query($conn);
 }
 
 ?>

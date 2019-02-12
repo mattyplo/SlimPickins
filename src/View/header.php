@@ -2,7 +2,7 @@
   require "../Model/MockFoodItemsData.php";
   require "../Model/renderMockData.php";
   require "../Model/MockMealsData.php";
-  require "../Controller/dbconnection.php";
+  require "../Controller/dbConnection.php";
 ?>
 
 <div id = "header">
