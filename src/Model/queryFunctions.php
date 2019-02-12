@@ -49,13 +49,10 @@ function deleteFoodItem($foodName){
 
   $sqlGetID ="SELECT FoodID FROM foods WHERE FoodName = '".$foodName."' ;";
   $result = $conn->query($sqlGetID);
-  
-  while($row = $result->fetch_assoc()){
-    $foodID = $row['FoodID'];
 
-    $sql = "DELETE FROM foods WHERE FoodID = ".$foodID.";";
-    mysqli_query($conn, $sql);
-  }
+  $foodID = $result->fetch_assoc();
+  $sql = "DELETE FROM foods WHERE FoodID = ".$foodID['FoodID'].";";
+  mysqli_query($conn, $sql);
 }
 
 
