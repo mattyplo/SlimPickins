@@ -70,7 +70,11 @@ CREATE TABLE `Users` (
 --
 ALTER TABLE `Foods`
   ADD PRIMARY KEY (`FoodID`);
-
+  
+-- Indexes for table `Users`
+--
+ALTER TABLE `Users`
+  ADD PRIMARY KEY (`UserID`);
 --
 -- Indexes for table `Meals`
 --
@@ -94,10 +98,7 @@ ALTER TABLE `MealTypes`
   ADD PRIMARY KEY (`MealTypeID`);
 
 --
--- Indexes for table `Users`
---
-ALTER TABLE `Users`
-  ADD PRIMARY KEY (`UserID`);
+
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -141,7 +142,8 @@ ALTER TABLE `Users`
 -- Constraints for table `Meals`
 --
 ALTER TABLE `Meals`
-  ADD CONSTRAINT `meals_ibfk_1` FOREIGN KEY (`MealTypeID`) REFERENCES `MealTypes` (`MealTypeID`);
+  ADD CONSTRAINT `meals_ibfk_1` FOREIGN KEY (`UserID`) REFERENCES `Users` (`UserID`),
+  ADD CONSTRAINT `meals_ibfk_2` FOREIGN KEY (`MealTypeID`) REFERENCES `MealTypes` (`MealTypeID`);
 
 --
 -- Constraints for table `MealsFoods`
