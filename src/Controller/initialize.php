@@ -11,14 +11,21 @@ function require_login(){
     
 }
 
-function log_in_user($userName){
+function log_in_user($user){
     session_regenerate_id();
-    $_SESSION['userName']=$userName;
+    $_SESSION['userName'] = $user['UserName'];
+    $_SESSION['userID'] = $user['UserID'];
     return true;
 }
 
 function is_logged_in(){
     return ISSET($_SESSION['userName']);
 }
+
+function log_out_user() {
+    unset($_SESSION['userID']);
+    unset($_SESSION['userName']);
+    return true;
+  }
 
 ?>

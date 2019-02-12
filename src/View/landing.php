@@ -46,6 +46,12 @@
                 <form id="newUser" name = "newUser" action ="newUser.php" method="POST">
                     <input type="submit" value ="New User">
                 </form>
+                <br>
+                <form name="logOut" action="../Controller/welcome.php" method="POST">
+                  <input name="logOut" type="hidden" value="true">
+                  <input type="submit" value="Log Out">
+              
+                </form>
             </div>
         </aside>
         </div>
