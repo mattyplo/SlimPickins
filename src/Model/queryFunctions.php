@@ -2,6 +2,7 @@
 
 require("../Controller/dbConnection.php");
 
+// ========Food=======
 function insertFoodItem($foodItem) {
   
   // use global to use variable names that are outside of function scope
@@ -18,6 +19,47 @@ function insertFoodItem($foodItem) {
   
 }
 
+function verifyFood($foodItem) {
+
+  global $conn;
+
+  $sqlFoodExist = "SELECT IF(COUNT(FoodName)>0, 'true', 'false') AS isTrue FROM foods WHERE FoodName = '";
+  $sqlFoodExist .= $foodItem['foodName']."';";
+  return mysqli_query($conn, $sqlFoodExist);
+}
+
+function updateFoodItem($foodItem){
+
+  global $conn;
+
+  $sqlGetID ="SELECT FoodID FROM foods WHERE FoodName = '".$foodItem['foodName']."' ;";
+  $result = $conn->query($sqlGetID);
+  $foodID = $result->fetch_assoc();
+
+  $sql = "UPDATE foods SET GramsPerServing = ";
+  $sql .= $foodItem['gramsPerServing'].", CaloriesPerGram = ";
+  $sql .= $foodItem['caloriesPerGram']." WHERE FoodID = ";
+  $sql .= $foodID['FoodID'].";";
+  mysqli_query($conn, $sql);
+}
+
+function deleteFoodItem($foodName){
+
+  global $conn;
+
+  $sqlGetID ="SELECT FoodID FROM foods WHERE FoodName = '".$foodName."' ;";
+  $result = $conn->query($sqlGetID);
+  
+  while($row = $result->fetch_assoc()){
+    $foodID = $row['FoodID'];
+
+    $sql = "DELETE FROM foods WHERE FoodID = ".$foodID.";";
+    mysqli_query($conn, $sql);
+  }
+}
+
+
+//======Meal======
 function insertMeal($meal) {
 
   global $conn;
@@ -87,31 +129,6 @@ function selectUser($user) {
   $sql .= $user['password'] . "';";
   return mysqli_query($conn, $sql);
 
-}
-
-function verifyFood($foodItem) {
-
-  global $conn;
-
-  $sqlFoodExist = "SELECT IF(COUNT(FoodName)>0, 'true', 'false') AS isTrue FROM foods WHERE FoodName = '";
-  $sqlFoodExist .= $foodItem['foodName']."';";
-  return mysqli_query($conn, $sqlFoodExist);
-}
-
-function updateFoodItem($foodItem){
-
-  global $conn;
-
-  $sqlGetID ="SELECT FoodID FROM foods WHERE FoodName = '".$foodItem['foodName']."' ;";
-  $result = $conn->query($sqlGetID);
-  $foodID = $result->fetch_assoc();
-  error_log(print_r($foodID, true));
-
-  $sql = "UPDATE foods SET GramsPerServing = ";
-  $sql .= $foodItem['gramsPerServing'].", CaloriesPerGram = ";
-  $sql .= $foodItem['caloriesPerGram']." WHERE FoodID = ";
-  $sql .= $foodID['FoodID'].";";
-  mysqli_query($conn, $sql);
 }
 
 function selectMeals($userID) {

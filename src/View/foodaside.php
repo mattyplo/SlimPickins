@@ -25,8 +25,13 @@ echo'
     <button class="foodItemManipulation" id="editItem">Edit Item</button> 
     </li>
     <li>
-    <button onclick = "acknowledge()" id="deleteItem">
-    Delete Item <!-- should be replace by code enable favorited item change to solid star-->
+';
+
+    include 'form_del_foodItem.php';
+
+echo'
+    <button class = "foodItemManipulation" id="deleteItem">
+    Delete Item
     </button> 
     </li>
 </ul>
