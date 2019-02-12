@@ -1,7 +1,4 @@
 <?php
-  require "../Model/MockFoodItemsData.php";
-  require "../Model/renderMockData.php";
-  require "../Model/MockMealsData.php";
   require "../Controller/dbConnection.php";
 ?>
 

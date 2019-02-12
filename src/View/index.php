@@ -24,7 +24,12 @@
     <div class="wrapper">
         
     <header>        
-        <?php require_once 'header.php'; ?>        
+
+        <?php require_once 'header.php'; ?> 
+        <?php require '../Controller/initialize.php';?>
+        <?php require_login();?>
+        <?php require_once '../Model/journalModel.php'; ?>
+
      </header>
 
          <main>
@@ -58,10 +63,10 @@
             
             <div id="existing">
               <br>
-              <select name="newFoodName">
+              <select name="FoodID">
                 <?php
-                  foreach ($mockDBQuery as $item) {
-                    echo renderFoodItemToOption($item) ;
+                  foreach ($allFoods as $food) {
+                  echo renderFoodToOption($food);
                   }
                 ?>
               </select>
@@ -69,11 +74,21 @@
               <br>
             </div>
             
-            <label for="gramsPerCalorie"><b>Grams Per Calorie</b></label>
-            <input type="number" name="gramsPerCalorie" step="0.01">
+            <ul>
+            <li>
+            <label for="caloriesPerGram"><b>Grams Per Calorie</b></label>
+            <input type="number" name="caloriesPerGram" step="0.01">
+            </li>
+            <li>
             <label for="gramsPerServing"><b>Grams Per Serving</b></label>
             <input type="number" name="gramsPerServing" step="0.01">
-            
+            </li>
+            <li>
+            <label for="gramsConsumed"><b>Grams Consumed</b></label>
+            <input type="number" name="gramsConsumed">
+            </li>
+            </ul>
+
             <br>
             <br>
             <button type="submit" class="btn">Add Meal</button>
@@ -82,7 +97,19 @@
         </div>
            
         <?php
-          renderMealsToPage($mockMealQuery);
+          foreach($meals as $key=>$val){ 
+            echo "<div><h3>";
+            echo $key . "</h3><ul>";
+            foreach($val as $k=>$v){ 
+              echo "<li><h4>" . $k . "</h4></li>";
+              foreach($v as $f){
+                echo "<li>" . $f . "</li>";
+              }
+            }
+
+            echo "</ul></div>";
+
+            }
         ?>
              
         </main>

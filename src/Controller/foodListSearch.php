@@ -3,9 +3,9 @@
 
     $get_foodSearch = implode(array_values($_GET));
 
-    $sql = "SELECT FoodID, FoodName, GramsPerServing, CaloriesPerGram FROM FOODS WHERE FoodName LIKE '". $get_foodSearch. "' ;";
+    $sql = "SELECT FoodID, FoodName, GramsPerServing, CaloriesPerGram FROM FOODS WHERE FoodName LIKE '%". $get_foodSearch. "%' ;";
     $result = $conn->query($sql);
-    error_log(print_r($result, TRUE));
+    
 
     echo '<div id="foodlist">';
 
@@ -21,7 +21,7 @@
             <div class=foodlist_itemProperty>
                 <ul>
                     <il class="foodlist_itemName"> '.$get_foodName.' </il> </br></br>
-                    <il> Calories '.$row['CaloriesPerGram'].' per gram</il> </br>
+                    <il> Calories: '.$row['CaloriesPerGram'].' per gram</il> </br>
                     <il> Serving Size: '.$row['GramsPerServing'].' </il>
             </div>
             </a>

@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Slim Pickins Landing</title>
 <link href="css/styles.css" type= "text/css" rel="stylesheet">
-<script src="js/addMeal.js"></script> 
-<script src="js/formValidation.js"></script> 
+<script src="js/foodItemManipulation.js"></script> 
 </head>
 
 <body>
     <div class="wrapper">
         <header>
             <?php require_once 'header.php'; ?>  
+            <?php require '../Controller/initialize.php';?>
+            <?php require_login();?>
         </header>
 
         <div class="content">

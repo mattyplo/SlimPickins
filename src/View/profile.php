@@ -12,11 +12,13 @@
 <body>
     <div class="wrapper">
         <header>
-            <?php require_once 'header.php'; ?>  
+            <?php require_once 'header.php'; ?> 
+            <?php require '../Controller/initialize.php';?>
+            <?php require_login();?>
         </header>
 
         <div class="content">
-            <form name = profile action = "welcome.php" onsubmit = "return validateForm()" method = "POST">
+            <form name = profile action = "index.php" method = "POST">
                 <div id = profile_fill>
                 First Name: <input type="text" name="first" placeholder="User Name"><br>
                 <br>
