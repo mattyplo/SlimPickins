@@ -75,8 +75,8 @@
             
             <ul>
             <li>
-            <label for="gramsPerCalorie"><b>Grams Per Calorie</b></label>
-            <input type="number" name="gramsPerCalorie" step="0.01">
+            <label for="caloriesPerGram"><b>Grams Per Calorie</b></label>
+            <input type="number" name="caloriesPerGram" step="0.01">
             </li>
             <li>
             <label for="gramsPerServing"><b>Grams Per Serving</b></label>
