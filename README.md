@@ -10,3 +10,7 @@ You will have to assign the appropriate values to the variables given.  The file
   $password = "password";
   $dbname = "dbname";
 
+#initiate Database for Project Demo.
+1. execute db_structure.sql in DataModel folder to initiate database structure.
+2. visit /SlimPickins/src/Controller/ini.php to populate database with mock data. 
+   Mock user name and password are displayed on the page.

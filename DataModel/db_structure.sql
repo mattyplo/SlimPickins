@@ -44,7 +44,7 @@ CREATE TABLE `MealsFoods` (
 
 CREATE TABLE `MealTypes` (
   `MealTypeID` int(11) NOT NULL,
-  `MealName` varchar(255) NOT NULL
+  `MealType` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
