@@ -1,18 +1,13 @@
 <?php
 require("dbConnection.php");
 require("../Model/queryFunctions.php");
-
-//initialize the session
-session_start();
-
-//check if user is already logged in, if yes, then redirect to welcome page
-//if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"]===true){
-   // header("location:../index.php");
-    //exit;
-//}
-
+require("initialize.php");
 if($_SERVER['REQUEST_METHOD']==='POST') {
-    
+  
+    if($_POST['logOut'] === 'true') {
+      log_out_user();
+      header("Location: ../View/landing.php");
+    }
     $user = [];
     $user['userName'] = $_POST['userName'];
     $user['password'] = $_POST['password'];
@@ -21,7 +16,10 @@ if($_SERVER['REQUEST_METHOD']==='POST') {
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
     
     if ($user['userName'] == $row['UserName'] && $user['password'] == $row['Password']){
+        log_in_user($row);
+        
         header("Location: ../View/profile.php");
+        
     } else {
         echo "No match.";
     }

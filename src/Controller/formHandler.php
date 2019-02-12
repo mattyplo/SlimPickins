@@ -1,7 +1,8 @@
 <?php
 
   // Will need to check inputs for single quotes, as they will throw an error without escaping them.
-
+  
+  require("initialize.php");
   require("dbConnection.php");
   require("../Model/queryFunctions.php");
 
@@ -25,7 +26,7 @@
     $meal = [];
     $meal['date'] = $_POST['date'];
     $meal['mealType'] = $mealType;
-    $meal['userID'] = 2;
+    $meal['userID'] = $_SESSION['userID'];
     
     insertMeal($meal);
     

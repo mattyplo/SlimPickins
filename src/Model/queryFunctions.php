@@ -132,7 +132,7 @@ function selectUser($user) {
   
   global $conn;
   
-  $sql = "SELECT UserName, `Password` FROM Users WHERE UserName = '";
+  $sql = "SELECT UserName, `Password`, UserID FROM Users WHERE UserName = '";
   $sql .= $user['userName'] . "' ";
   $sql .= "AND ";
   $sql .= "`Password` = '";

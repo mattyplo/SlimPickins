@@ -24,11 +24,12 @@
     <div class="wrapper">
         
     <header>        
-        <?php
-          require_once 'header.php';
-          require_once '../Model/journalModel.php';
-          
-        ?>        
+
+        <?php require_once 'header.php'; ?> 
+        <?php require '../Controller/initialize.php';?>
+        <?php require_login();?>
+        <?php require_once '../Model/journalModel.php'; ?>
+
      </header>
 
          <main>
