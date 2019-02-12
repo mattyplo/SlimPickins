@@ -3,7 +3,7 @@
   require("queryFunctions.php");
   
   // placeholder int 2 in parameter until we g
-  $userMeals = selectMeals(2);
+  $userMeals = selectMeals($_SESSION['userID']);
 
   // Array to store meals into
   $meals = [];
@@ -38,13 +38,13 @@ WHERE MEALID = ";
     $foodName = $foodNameRow[0];
     
     // Grab each meal type and convert it into mealName
-    $sql = "SELECT MealName FROM MealTypes WHERE MealTypeID = ";
+    $sql = "SELECT MealType FROM MealTypes WHERE MealTypeID = ";
     $sql .= (int)$val['MealTypeID'];
     $mealTypeResult = mysqli_query($conn, $sql);
     $mealTypeRow = mysqli_fetch_row($mealTypeResult);
     $mealType = $mealTypeRow[0];
     
-    $date = $val['Date'];
+    $date = $val['MealDate'];
     
     //$meals[$val['Date']] = [];
     if (!array_key_exists($date, $meals)) {

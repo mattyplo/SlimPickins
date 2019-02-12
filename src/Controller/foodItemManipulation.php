@@ -16,5 +16,5 @@ if ($result['isTrue'] == 'true'){
     insertFoodItem($foodItem);
 }
 
-header("Location: ../View/food_list.php?search=".$foodItem[foodName]);
+header("Location: ../View/food_list.php?search=".$foodItem['foodName']);
 ?>
