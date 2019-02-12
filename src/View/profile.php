@@ -12,7 +12,9 @@
 <body>
     <div class="wrapper">
         <header>
-            <?php require_once 'header.php'; ?>  
+            <?php require_once 'header.php'; ?> 
+            <?php require '../Controller/initialize.php';?>
+            <?php require_login();?>
         </header>
 
         <div class="content">

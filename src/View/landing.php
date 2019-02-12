@@ -29,16 +29,28 @@
 
         <aside id="landing">
             <div id="login">
-                <form id = login name = "login" action = "../Controller/welcome.php" onsubmit = "return validateForm()" method = "POST">
+                <form id = "login" name = "login" action = "../Controller/welcome.php" method = "POST">
                     <input type="text" name="userName" placeholder="User Name"><br>
                     <br>
                     <input type="password" name="password" placeholder="Password"><br>
                     <br>
                     <input type="submit" value="Log In"> 
                 </form>
-                </br>
+                <br>
+                <!-- Add when logging is allowed
+                <form id="logout" name = "logout">
+                    <input type="submit" value ="Log Out">
+                </form>
+                <br>
+                -->
                 <form id="newUser" name = "newUser" action ="newUser.php" method="POST">
                     <input type="submit" value ="New User">
+                </form>
+                <br>
+                <form name="logOut" action="../Controller/welcome.php" method="POST">
+                  <input name="logOut" type="hidden" value="true">
+                  <input type="submit" value="Log Out">
+              
                 </form>
             </div>
         </aside>
