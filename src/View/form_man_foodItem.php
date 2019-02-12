@@ -23,7 +23,7 @@ echo '
 
     <br>
     <br>
-    <button type="submit" class="btn">Add Food</button>
+    <button type="submit" class="btn">Add/Edit Food</button>
     <button type="button" id="closeFormButton" class="btn cancel">Cancel</button>
   </form>
 </div>

@@ -102,9 +102,15 @@ function updateFoodItem($foodItem){
 
   global $conn;
 
-  $sql = "UPDATE foods SET GramPerServing =";
-  $sql .= $foodItem['gramsPerServing'].", CaloriesPerGram =";
-  $sql .= $foodItem['caloriesPerGram'];
+  $sqlGetID ="SELECT FoodID FROM foods WHERE FoodName = '".$foodItem['foodName']."' ;";
+  $result = $conn->query($sqlGetID);
+  $foodID = $result->fetch_assoc();
+  error_log(print_r($foodID, true));
+
+  $sql = "UPDATE foods SET GramsPerServing = ";
+  $sql .= $foodItem['gramsPerServing'].", CaloriesPerGram = ";
+  $sql .= $foodItem['caloriesPerGram']." WHERE FoodID = ";
+  $sql .= $foodID['FoodID'].";";
   mysqli_query($conn, $sql);
 }
 
