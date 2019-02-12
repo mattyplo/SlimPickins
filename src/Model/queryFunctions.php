@@ -3,6 +3,7 @@
 require("../Controller/dbConnection.php");
 
 // ========Food=======
+
 function insertFoodItem($foodItem) {
   
   // use global to use variable names that are outside of function scope
@@ -16,8 +17,7 @@ function insertFoodItem($foodItem) {
   $sql .= $foodItem['gramsPerServing'];
   $sql .= ")";
   mysqli_query($conn, $sql);
-  
-}
+  }
 
 function verifyFood($foodItem) {
 
@@ -62,7 +62,7 @@ function insertMeal($meal) {
   global $conn;
   
   $sqlMeal = "INSERT INTO Meals ";
-  $sqlMeal .= "(`Date`, MealTypeID, UserID) ";
+  $sqlMeal .= "(MealDate, MealTypeID, UserID) ";
   $sqlMeal .= "VALUES (";
   $sqlMeal .= "'" . $meal['date'] . "',";
   $sqlMeal .= $meal['mealType'] . ",";
@@ -71,6 +71,16 @@ function insertMeal($meal) {
   mysqli_query($conn, $sqlMeal);
  
 }
+
+function selectMeals($userID) {
+  
+  global $conn;
+  
+  $sql = "SELECT * FROM Meals ";
+  $sql .= "WHERE UserID = " . $userID;
+  return mysqli_query($conn, $sql);
+}
+
 
 /***************** MealsFoods Queries *********************/
 
@@ -99,6 +109,9 @@ WHERE MEALID = ";
   return (int)$mealFoods[0];
   
 }
+
+//==== User ====
+
 function insertUser($user) {
   
   global $conn;
@@ -128,13 +141,17 @@ function selectUser($user) {
 
 }
 
-function selectMeals($userID) {
+//====Meal Type====
+function insertMealType($mealType) {
   
   global $conn;
   
-  $sql = "SELECT * FROM Meals ";
-  $sql .= "WHERE UserID = " . $userID;
-  return mysqli_query($conn, $sql);
+  $sql = "INSERT INTO mealtypes ";
+  $sql .="(MealType)";
+  $sql .="VALUE (";
+  $sql .="'" . $mealType ."'";
+  $sql .=")";
+  mysqli_query($conn, $sql);
+  
 }
-
 ?>
