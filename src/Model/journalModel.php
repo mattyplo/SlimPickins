@@ -1,10 +1,10 @@
 <?php
   require("../Controller/dbConnection.php");
+  require("queryFunctions.php");
+  
+  // placeholder int 2 in parameter until we g
+  $userMeals = selectMeals(2);
 
-  $sql = "SELECT * FROM Meals ";
-  $sql .= "WHERE UserID = 2";
-  $userMeals = mysqli_query($conn, $sql);
- 
   // Array to store meals into
   $meals = [];
   
@@ -19,16 +19,20 @@
   
   foreach ($userMeals as $meal=>$val) {
     // grab each food item in a meal and calories consumed
-    $sql = "SELECT FoodID, GramsConsumed FROM mealsfoods
+    /*$sql = "SELECT FoodID, GramsConsumed FROM mealsfoods
 WHERE MEALID = ";
     $sql .= $val['MealID'];
     $mealFoodsResult = mysqli_query($conn, $sql);
-    $mealFoods = mysqli_fetch_row($mealFoodsResult);
+    $mealFoods = mysqli_fetch_row($mealFoodsResult);*/
     //var_dump($mealFoods);
+    $foodID = selectFoodID($val['MealID']);
     
     $sql = "SELECT FoodName FROM Foods WHERE FOODID = ";
     // index 0 is FoodID
-    $sql .= (int)$mealFoods[0];
+    $sql .= $foodID;
+    $foodItemResult = mysqli_query($conn, $sql);
+    $foodNameRow = mysqli_fetch_row($foodItemResult);
+    $foodName = $foodNameRow[0];
     $foodItemResult = mysqli_query($conn, $sql);
     $foodNameRow = mysqli_fetch_row($foodItemResult);
     $foodName = $foodNameRow[0];
@@ -50,7 +54,7 @@ WHERE MEALID = ";
         array_push($meals[$date][$mealType], $foodName);
         
         //$meals[$date]['foodName'] = $foodName;
-      }
+      } 
     } else { 
         if (!array_key_exists($mealType, $meals[$date])){
         $meals[$date][$mealType] = [];
@@ -60,5 +64,22 @@ WHERE MEALID = ";
   }
   
   uksort($meals, 'date_compare');
+
+/********************** Existing Food Item options **************/
+
+  $sql = "SELECT * FROM foods;";
+  $allFoods = mysqli_query($conn, $sql);
+
+  function renderFoodToOption($dataArray) {
+    if (!(empty($dataArray["FoodName"]))) {
+
+      $option_start = "<option value='";
+      $option_mid = "'>";
+      $option_end = "</option>";
+      $foodName = $dataArray['FoodName'];
+      $foodID = $dataArray['FoodID'];
+      return $option_start . $foodID . $option_mid . $foodName . $option_end;
+    }
+  }
 
 ?>

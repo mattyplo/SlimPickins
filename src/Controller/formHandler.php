@@ -37,6 +37,8 @@
     // handlers the creation of a new food item
     if ($_POST['newOrExisting'] == "existing") {
       // insert food into meal
+      $mealsFoods['foodID'] = $_POST['FoodID'];
+      //die($mealsFoods['foodID']);
     } else {
       
       $foodItem = [];

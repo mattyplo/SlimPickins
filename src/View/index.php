@@ -26,7 +26,8 @@
     <header>        
         <?php
           require_once 'header.php';
-          require_once '../Model/journalModel.php'
+          require_once '../Model/journalModel.php';
+          
         ?>        
      </header>
 
@@ -61,10 +62,10 @@
             
             <div id="existing">
               <br>
-              <select name="newFoodName">
+              <select name="FoodID">
                 <?php
-                  foreach ($userMeals as $item) {
-                    echo renderFoodItemToOption($item) ;
+                  foreach ($allFoods as $food) {
+                  echo renderFoodToOption($food);
                   }
                 ?>
               </select>
