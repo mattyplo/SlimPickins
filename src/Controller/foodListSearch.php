@@ -21,7 +21,7 @@
             <div class=foodlist_itemProperty>
                 <ul>
                     <il class="foodlist_itemName"> '.$get_foodName.' </il> </br></br>
-                    <il> Calories '.$row['CaloriesPerGram'].' per gram</il> </br>
+                    <il> Calories: '.$row['CaloriesPerGram'].' per gram</il> </br>
                     <il> Serving Size: '.$row['GramsPerServing'].' </il>
             </div>
             </a>

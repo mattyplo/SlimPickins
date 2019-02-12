@@ -93,7 +93,7 @@ function verifyFood($foodItem) {
 
   global $conn;
 
-  $sqlFoodExist = "SELECT IF(COUNT(FoodName)>0, 'true', 'false') FROM foods WHERE FoodName = '";
+  $sqlFoodExist = "SELECT IF(COUNT(FoodName)>0, 'true', 'false') AS isTrue FROM foods WHERE FoodName = '";
   $sqlFoodExist .= $foodItem['foodName']."';";
   return mysqli_query($conn, $sqlFoodExist);
 }
@@ -105,7 +105,8 @@ function updateFoodItem($foodItem){
   $sql = "UPDATE foods SET GramPerServing =";
   $sql .= $foodItem['gramsPerServing'].", CaloriesPerGram =";
   $sql .= $foodItem['caloriesPerGram'];
-  return mysqli_query($conn);
+  mysqli_query($conn, $sql);
+}
 
 function selectMeals($userID) {
   
